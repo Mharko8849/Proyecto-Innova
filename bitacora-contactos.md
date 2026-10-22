@@ -40,12 +40,13 @@ De Lunes a viernes de 8:30 AM a 18:30 PM | Sábados  de 9 a 15:00 PM
 | 3 | 10/2026 | Contratista de obras | Pyme / Contratista independiente (Construcción y remodelación) | Entrevista | X | Dedica entre 2 y 3 horas por noche a cotizar. Usa cuaderno porque el software especializado es muy caro. No conoce su margen real de ganancia y nota sobrecostos recién al comprar materiales o por errores de cálculo. Ve factible app móvil en terreno si es rápida y simple. Acepta anonimización. | Diseñar interfaz móvil de captura rápida (pocos campos) para validar usabilidad con su equipo. |
 | 4 | 10/2026 | Contratista | Empresa Contratista / Mandante (Construcción / Subcontratación de rubros) | Entrevista | X | Verifica precios con histórico o pidiendo presupuestos a distintos maestros. Pagaría suscripción mensual con reportes por el índice de precios reales, pero solicita que incluya directorio/contacto de maestros por rubro para cotizaciones personalizadas. Advierte riesgo de depender de la "buena fe" en los datos. | Evaluar funcionalidad de directorio de especialistas verificados y mecanismos de auditoría/validación de datos del índice. |
 | 5 | 09/10/2026 | Contratista de instalación y mantención de equipos de climatización | Pyme de climatización que atiende hoteles, edificios y particulares; nombre no indicado | Entrevista | Angel Benavides | Utiliza Excel para presupuestar y consulta precios con proveedores diaria o semanalmente. Está comenzando a comparar costos presupuestados y reales; señala desviaciones que podrían alcanzar un 15%, principalmente en proyectos grandes, por tiempos muertos y protocolos. Centraliza los registros e informes y recibe fotografías del personal. Considera factible registrar costos por partida desde una aplicación móvil si facilita las tareas. Advierte que cotizar con precios generales sería poco útil en su rubro, por la especificidad de los equipos y los descuentos particulares de proveedores. | validar un prototipo sencillo de registro de costos reales por partida y comparación con el presupuesto, y contrastar estas necesidades con contratistas de otros rubros. |
+| 6 | 10/2026 | Constructor Civil | Constructora de terminaciones y edificación | Entrevista | Marco Ortiz | Entrevista realizada (20 preguntas respondidas en profundidad). Arma APU en Excel fijando dólar referencial; en contratos a suma alzada el presupuesto no se modifica, se crean partidas nuevas. Desviación típica del 2 % al 10 %. El Administrador de Obra / Jefe de Terreno es quien debería registrar cantidades y costos reales (no los maestros). Dispuesto a compartir datos anonimizados pero con temor a exponer márgenes de ganancia ante la competencia. | Incorporar hallazgos sobre rol del Administrador de Obra como usuario clave de captura en terreno; validar UX nivel WhatsApp y modelo de confidencialidad de márgenes. |
 
 ## Resumen
 
-- Contactos intentados: 5
-- Respuestas obtenidas: 5
-- Conversaciones sostenidas: 5
+- Contactos intentados: 6
+- Respuestas obtenidas: 6
+- Conversaciones sostenidas: 6
 - **Mínimo exigible al 15 de octubre: 3 conversaciones**
 
 ## Puertas ya tocadas por otros equipos

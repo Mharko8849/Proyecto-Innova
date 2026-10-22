@@ -146,9 +146,43 @@
 
 ---
 
-## Antes de subir esto, verifiquen
+# Resumen de entrevista — E-05
 
-- [ ] Pedí permiso al empezar la conversación para tomar notas y compartir un resumen anónimo
-- [ ] No aparece el nombre de la persona ni el de su empresa
-- [ ] No hay grabaciones adjuntas
-- [ ] Si la persona pidiera que borremos su información, sabemos cómo hacerlo
+| Campo | Contenido |
+| :--- | :--- |
+| **Código** | E-05 |
+| **Fecha y duración** | Octubre 2026, ~35 minutos |
+| **Rol y sector** | Constructor Civil, experiencia en terminaciones constructivas (empresa Reviste 3D) y conocimiento del sector de edificación en altura |
+| **Tipo** | Experto técnico (arma presupuestos, cubicaciones y APU) |
+| **Equipo** | Grupo 1 — Desafío 4: ÍndicePartidas |
+| **¿Autorizó compartir el resumen?** | Sí |
+
+## Qué preguntamos
+1. ¿Cuánto tiempo dedica la empresa a armar presupuestos y cotizaciones, qué herramientas utilizan (Excel, software especializado) y cuál es su tasa de adjudicación?
+2. ¿Cómo verifican y actualizan los costos de materiales, cómo gestionan las modificaciones de un cliente en contratos a suma alzada y cuánto se desvía típicamente el costo real respecto al presupuestado?
+3. ¿Quién registra avances y costos en terreno, qué nivel de adopción tecnológica tienen los trabajadores en obra y qué requisitos debería cumplir una herramienta para que la usen voluntariamente?
+4. ¿Estarían dispuestos a compartir datos de costos ejecutados para cotizar más rápido, qué temores de confidencialidad existen frente a la competencia y quién pagaría por un índice de mercado?
+
+## Tres hallazgos
+1. **El tiempo de presupuestación es extremadamente variable según la escala de la empresa, y Excel sigue siendo el estándar:** En empresas pequeñas de terminaciones, la cubicación y presupuesto de un proyecto toma 1 a 2 días; en constructoras grandes con 5 o más proyectos de edificación en altura, el proceso puede tomar un mes o más. Los APU se arman en Excel fijando un dólar referencial (ej. $950 cuando fluctúa entre $900 y $1.000) y precios históricos de materiales. El entrevistado también posee un diploma en Synchro 4D (vinculación con carta Gantt), y menciona que herramientas como BIM y Calidad Cloud (suscripción mensual para avances en tiempo real) se están empezando a implementar. La tasa de adjudicación varía drásticamente: una empresa chica en crecimiento puede cerrar 5 de 10 cotizaciones, mientras que una constructora de renombre como Echeverría Izquierdo podría cerrar las 10 de 10.
+2. **En contratos a suma alzada el presupuesto es una "apuesta" que no se modifica, y las desviaciones provienen de errores no detectados en fases previas:** El presupuesto se entrega al mandante y, si lo acepta, ese es el precio final; las ganancias o pérdidas quedan para el contratista. Las modificaciones de última hora no alteran lo existente, sino que se crean **partidas nuevas** con el producto y precio actualizados. Al finalizar un proyecto se realiza un análisis para retroalimentación, pero su utilidad es limitada porque cada proyecto es único. El costo real suele desviarse entre un **2 % y un 10 %**, principalmente en obra gruesa, porque los errores no se detectan en la fase de planos (el entrevistado alude a un "gráfico de costo-incidencia" donde los cambios baratos son al inicio y los costosos en ejecución).
+3. **El registro de costos en terreno debe recaer en el Administrador de Obra, con una UX nivel WhatsApp, y hay escepticismo sobre pagar por datos de la competencia:** El entrevistado señala que no tiene sentido que el equipo de terreno ingrese costos (ellos se preocupan de otras cosas), pero sí ve al Administrador de Obra haciéndolo y registrando cantidades. Los maestros (rango de edad 40 a 55 años) se resisten al cambio tecnológico y solo usan el celular para enviar fotos o reportes básicos vía BIM cuando la empresa lo implementa. La herramienta debe ser "tan intuitiva como enviar un mensaje de WhatsApp" ("hay que pensar en los papás de uno"). Estaría dispuesto a compartir costos ejecutados si la plataforma le ayuda a cotizar más rápido, pero teme que la competencia conozca sus **márgenes de ganancia** y los rebaje en licitaciones. Duda que las constructoras paguen por un índice externo ("me sirve la información de mi empresa, no me interesa mucho la competencia"), mientras que los mandantes ya estiman costos con su propio staff e ITO.
+
+## Una cita textual
+
+> "En la construcción, el presupuesto es una apuesta, una apuesta que puede ser buena o mala [...] Si ellos lo aceptan, ese es el precio que se me paga, ni más ni menos; si gano queda para mí y si lo hice mal debo hacerme cargo de mi error y de lo monetario."
+>
+> *(Cita complementaria sobre usabilidad y confidencialidad)*: "Yo creo que una característica que tendría que tener la herramienta es que sea intuitiva, muy fácil, hay que pensar que es para los papás de uno, porque generalmente los maestros tienen un rango de edad de 40 a 55 [...] Si alguien sabe con qué margen de ganancia estoy jugando, no me gustaría que él rebaje eso para ganarme."
+
+## Qué cambió en nuestra hipótesis
+- **Sobre quién captura el dato en terreno (el riesgo mortal del desafío):** Creíamos que cualquier trabajador en obra registraría el gasto real. La entrevista nos aclaró que el flujo de costos y cantidades ejecutadas debe apuntar al **Administrador de Obra / Jefe de Terreno** (apoyado por fotos rápidas de los maestros) y con una UX extremadamente simple (nivel WhatsApp). El equipo de terreno "se preocupa de otras cosas" y no le aporta sentido registrar costos.
+- **Sobre la modificación de presupuestos y la retroalimentación post-proyecto:** En contratos a suma alzada el presupuesto original **no se edita** durante la ejecución; los cambios de última hora se agregan como **partidas nuevas (extraordinarias)** a precio actual. Al cierre se hace un análisis, pero su valor es limitado porque cada proyecto constructivo es único por definición, lo que reduce la transferibilidad directa de lecciones aprendidas.
+- **Sobre el modelo de negocio del Índice:** Confirmamos que las constructoras pagan suscripción mensual por control de avance/gestión (como hacen con Calidad Cloud), pero **no pagarían por un índice de la competencia** ("me sirve la información de mi empresa") y exigen confidencialidad absoluta de sus márgenes comerciales. Esto refuerza la tesis de que el índice agregado debe anonimizar estrictamente los márgenes y venderse al **segundo cliente** (aseguradoras, tasadores, inmobiliarias o mandantes sin staff propio de estimación de costos).
+
+---
+
+### Antes de subir esto, verifiquen
+- [x] Pedí permiso al empezar la conversación para tomar notas y compartir un resumen anónimo
+- [x] No aparece el nombre de la persona ni el de su empresa
+- [x] No hay grabaciones adjuntas
+- [x] Si la persona pidiera que borremos su información, sabemos cómo hacerlo
