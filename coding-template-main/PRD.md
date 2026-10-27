@@ -650,8 +650,8 @@ Permitirá que contratistas que lo autoricen aparezcan en un directorio por espe
 |RNF16|Datos|Persistencia histórica|Versiones y ejecuciones históricas no deben sobrescribirse|
 |RNF17|Datos|Uso de transacciones|Operaciones críticas consistentes ante errores|
 |RNF18|Datos|Respaldo y recuperación|Mecanismo de copia y recuperación disponible|
-|RNF19|Tecnología|Backend Java + Spring Boot|Proyecto ejecutable en el stack definido|
-|RNF20|Tecnología|Frontend React + TypeScript|Aplicación web implementada con el stack definido|
+|RNF19|Tecnología|Go|Proyecto ejecutable en el stack definido|
+|RNF20|Tecnología|Vue|Aplicación web implementada con el stack definido|
 |RNF21|Arquitectura|API REST con JSON|Comunicación cliente-servidor mediante endpoints REST|
 |RNF22|Compatibilidad|Compatibilidad web|Chrome, Edge y Firefox modernos|
 |RNF23|Arquitectura|Separación cliente-servidor|Frontend y backend desplegables/modificables independientemente|
@@ -785,28 +785,12 @@ Permitirá que contratistas que lo autoricen aparezcan en un directorio por espe
 
 ## Dependencias técnicas
 
-- Java.
-    
-- Spring Boot.
-    
-- Maven.
-    
+- Go.
+- Vue.
 - PostgreSQL.
-    
-- React.
-    
-- TypeScript.
-    
-- Spring Data JPA / Hibernate.
-    
-- Spring Security.
-    
 - API REST.
-    
 - JSON.
-    
 - Git.
-    
 - OpenAPI / Swagger para documentación de API.
     
 
