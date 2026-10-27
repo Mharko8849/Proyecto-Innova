@@ -48,8 +48,8 @@ Spring Security
 
 |N°|Requerimiento no funcional|Descripción / Criterio|
 |---|---|---|
-|**RNF-19**|Backend|El backend será desarrollado en Java utilizando Spring Boot.|
-|**RNF-20**|Frontend|La interfaz web será desarrollada utilizando React y TypeScript.|
+|**RNF-19**|Backend|El backend será desarrollado en Go, utilizando una arquitectura modular para la implementación de la lógica de negocio y servicios del sistema.|
+|**RNF-20**|Frontend|La interfaz web será desarrollada utilizando Vue para construir una interfaz web responsiva e interactiva|
 |**RNF-21**|Arquitectura de comunicación|Frontend y backend deberán comunicarse mediante una API REST utilizando JSON.|
 |**RNF-22**|Compatibilidad web|El sistema deberá funcionar correctamente en versiones modernas de Chrome, Edge y Firefox.|
 |**RNF-23**|Independencia cliente-servidor|El frontend y backend deberán mantenerse desacoplados para permitir modificaciones independientes.|
