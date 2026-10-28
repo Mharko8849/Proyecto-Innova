@@ -57,7 +57,7 @@ Para garantizar la entrega por flujo vertical utilizable, cada funcionalidad (ej
 4. **Implementación de Repositorio (Capa de Acceso a Datos):** Construir queries parametrizadas con soporte de transacciones ACID para operaciones críticas (ej. creación de cotización con partidas y APU).
 5. **Implementación de Servicio / Caso de Uso (Lógica de Dominio):** Codificar reglas de negocio puras (cálculo de APU, aplicación de márgenes, bloqueo de modificación en cotizaciones aceptadas, anonimización).
 6. **Implementación de Handler / Controlador:** Parsear request, validar sintaxis, extraer identidad del token JWT y delegar al caso de uso.
-7. **Implementación de Frontend (Vue responsivo):** Construir vistas y componentes considerando visualización en escritorio y dispositivos móviles para terreno.
+7. **Implementación de Frontend (React responsivo):** Construir vistas y componentes considerando visualización en escritorio y dispositivos móviles para terreno.
 8. **Testing:** Añadir tests unitarios para las reglas de cálculo y tests de integración para endpoints clave.
 9. **Verificación manual y de seguridad:** Probar caso exitoso, caso con datos erróneos y verificar que usuarios de una empresa nunca puedan acceder a datos de otra.
 10. **Actualización documental y registro:** Actualizar la documentación y marcar el estado en la fase correspondiente.
