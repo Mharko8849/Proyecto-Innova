@@ -172,8 +172,8 @@ En la primera versión del producto no se busca:
 |Dominio|Cotizaciones, costos, construcción y servicios|
 |Plataforma|Web responsiva|
 |Dispositivos prioritarios|Computador, tablet y teléfono móvil|
-|Backend|Java + Spring Boot|
-|Frontend|React + TypeScript|
+|Backend|Go|
+|Frontend|React + JavaScript|
 |Base de datos|PostgreSQL|
 |Comunicación|API REST mediante JSON|
 |Integraciones iniciales|No obligatorias para el MVP|
@@ -775,9 +775,7 @@ Permitirá que contratistas que lo autoricen aparezcan en un directorio por espe
 |Desarrollo de ML requiere más datos de los disponibles inicialmente|Alto|Utilizar primero estadísticas e históricos y evolucionar hacia ML al disponer de datos suficientes|Abierto|
 |Construcción, Electricidad y Vidriería serán rubros iniciales|Medio|Desarrollar catálogos iniciales y mantener arquitectura extensible|Aprobada|
 |Se incorpora opción “Otro” configurable|Alto|Guardar la configuración como datos para evitar programación específica por rubro|Aprobada|
-|Backend Java + Spring Boot|Técnico|Stack conocido, modular y compatible con API REST|Aprobada|
 |PostgreSQL como base de datos|Técnico|Base relacional adecuada para trazabilidad y relaciones del sistema|Aprobada|
-|React + TypeScript como frontend|Técnico|Permite interfaz web responsiva y desacoplada del backend|Propuesta / Aprobación equipo|
 
 ---
 
@@ -786,7 +784,8 @@ Permitirá que contratistas que lo autoricen aparezcan en un directorio por espe
 ## Dependencias técnicas
 
 - Go.
-- Vue.
+- React.
+- JavaScript
 - PostgreSQL.
 - API REST.
 - JSON.
