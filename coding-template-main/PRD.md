@@ -651,7 +651,7 @@ Permitirá que contratistas que lo autoricen aparezcan en un directorio por espe
 |RNF17|Datos|Uso de transacciones|Operaciones críticas consistentes ante errores|
 |RNF18|Datos|Respaldo y recuperación|Mecanismo de copia y recuperación disponible|
 |RNF19|Tecnología|Go|Proyecto ejecutable en el stack definido|
-|RNF20|Tecnología|Vue|Aplicación web implementada con el stack definido|
+|RNF20|Tecnología|React|Aplicación web implementada con el stack definido|
 |RNF21|Arquitectura|API REST con JSON|Comunicación cliente-servidor mediante endpoints REST|
 |RNF22|Compatibilidad|Compatibilidad web|Chrome, Edge y Firefox modernos|
 |RNF23|Arquitectura|Separación cliente-servidor|Frontend y backend desplegables/modificables independientemente|
