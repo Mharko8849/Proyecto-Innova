@@ -152,7 +152,7 @@
 | :--- | :--- |
 | **Código** | E-05 |
 | **Fecha y duración** | Octubre 2026, ~35 minutos |
-| **Rol y sector** | Constructor Civil, experiencia en terminaciones constructivas (empresa Reviste 3D) y conocimiento del sector de edificación en altura |
+| **Rol y sector** | Constructor Civil, experiencia en terminaciones constructivas y conocimiento del sector de edificación en altura |
 | **Tipo** | Experto técnico (arma presupuestos, cubicaciones y APU) |
 | **Equipo** | Grupo 1 — Desafío 4: ÍndicePartidas |
 | **¿Autorizó compartir el resumen?** | Sí |
