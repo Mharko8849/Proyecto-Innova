@@ -1,216 +1,280 @@
-# Pricing — Grupo 1 — Desafío: ÍndicePartidas
+# Pricing — Grupo 1 — ÍndicePartidas
 
-## Métrica de valor
+# 1. Métrica de valor
 
-- **Por qué unidad crece el valor para el cliente:** cantidad de **cotizaciones y trabajos gestionados al mes**.
-    
-    El valor de ÍndicePartidas aumenta a medida que el contratista cotiza y ejecuta más trabajos, porque puede reutilizar más información histórica, controlar una mayor cantidad de costos reales y detectar más desviaciones entre lo presupuestado y lo ejecutado. [E-01, E-02, E-04]
-    
-- **¿El cliente puede contarla solo, sin que se la expliquen?** Sí. El contratista conoce cuántas cotizaciones genera y cuántos trabajos ejecuta.
-    
-- **¿Crece cuando al cliente le va bien?** Sí. Si la empresa consigue más clientes y ejecuta más trabajos, aumenta la cantidad de cotizaciones, órdenes de trabajo y comparaciones de costos que administra mediante la plataforma.
-    
-- **Forma de cobro elegida:** **suscripción mensual por tramos**.
-    
-- **Por qué esa y no otra:** las entrevistas muestran clientes de tamaños y formas de trabajo diferentes. Un contratista independiente no debería pagar lo mismo que una empresa con varios proyectos y trabajadores. Además, E-03 indicó explícitamente preferir una **suscripción mensual** para acceder al índice y sus reportes. [E-03]
-    
-    No se propone cobrar por usuario, porque el valor principal no aumenta necesariamente por tener más personas con acceso, sino por la cantidad de cotizaciones y trabajos que la empresa administra. Tampoco se cobrará inicialmente por transacción o como porcentaje de cada obra, porque ÍndicePartidas no participa directamente en el pago del trabajo. [H]
-    
+La métrica propuesta corresponde a la cantidad de cotizaciones y trabajos gestionados mensualmente.
+
+El valor del software aumenta a medida que el usuario administra más cotizaciones, proyectos y registros de ejecución.
+
+Esta métrica es comprensible para los clientes porque conocen aproximadamente su volumen de trabajo.
+
+**Estado:** hipótesis comercial pendiente de validación [H].
 
 ---
 
-## Cuánto vale el problema
+# 2. Cuánto vale el problema
 
-Para estimar el valor mensual se utiliza como referencia un contratista pequeño que realiza aproximadamente **10 cotizaciones mensuales** [H].
+Para realizar una estimación inicial se considera un contratista que genera diez cotizaciones mensuales.
 
-E-01 indicó que cada cotización tarda entre **30 minutos y 2 horas**. Para la estimación se utiliza un promedio de **1,25 horas por cotización** [H a partir del rango E-01].
+E-01 indicó que una cotización puede requerir entre 30 minutos y 2 horas.
 
-El valor de una hora del contratista se estima inicialmente en **$10.000 CLP por hora** [H]. Este valor deberá validarse posteriormente.
+Se utiliza como referencia un promedio estimado de 1,25 horas.
 
-|Cuenta|Cálculo|Monto mensual|Fuente|
+El valor de una hora del contratista se estima en $10.000.
+
+|Concepto|Valor|
+|---|---|
+|Cotizaciones mensuales|10|
+|Tiempo promedio|1,25 horas|
+|Valor de la hora|$10.000|
+|Valor mensual estimado del tiempo|$125.000|
+
+Los valores de cotizaciones mensuales y costo por hora son supuestos de análisis.
+
+La estimación no incluye las posibles pérdidas económicas por errores de presupuesto.
+
+---
+
+# 3. Paquetes y precios
+
+Se proponen tres planes de suscripción.
+
+|Característica|Independiente|Pyme|Empresa|
 |---|---|---|---|
-|Horas destinadas a cotizar|10 cotizaciones/mes [H] × 1,25 h [E-01/H] × $10.000/h [H]|**$125.000 [H]**|E-01 + [H]|
-|Tiempo destinado a revisar o reconstruir precios anteriores|No existe información suficiente para monetizarlo actualmente|No calculado|E-02, E-04|
-|Pérdidas por errores de cotización|E-01 reporta desviaciones de 20 % a 30 % en trabajos complejos, pero no conocemos el valor promedio de cada trabajo ni su frecuencia|No calculado|E-01|
-|Pérdidas por desviaciones en construcción|E-05 reporta desviaciones de 2 % a 10 %, pero no disponemos de un monto promedio de obra para monetizarlas|No calculado|E-05|
-|**Total monetizable actualmente**|Solo tiempo destinado a cotizar|**$125.000/mes [H]**|E-01 + [H]|
+|Cliente objetivo|Trabajador independiente|Pequeña empresa|Empresa con varios proyectos|
+|Cotizaciones mensuales|Hasta 10 [H]|Hasta 40 [H]|Sin límite inicial definido [H]|
+|Usuarios|1 [H]|Hasta 5 [H]|Hasta 15 [H]|
+|Cotizaciones|Sí|Sí|Sí|
+|Catálogo de partidas|Sí|Sí|Sí|
+|Control Cotizado vs. Ejecutado|Sí|Sí|Sí|
+|Historial avanzado|Básico|Completo|Completo|
+|Roles y permisos|Básico|Sí|Avanzado|
+|Dashboard|Básico|Sí|Avanzado|
+|Rubro personalizado|Por validar|Sí|Sí|
+|Precio mensual|$9.990 + IVA|$24.990 + IVA|$59.990 + IVA|
 
-> Esta estimación es conservadora porque solo monetiza el tiempo destinado a cotizar. No incorpora todavía el valor económico de evitar errores de presupuesto, sobrecostos o pérdida de margen, aunque las entrevistas muestran que esos problemas existen. [E-01, E-02, E-04, E-05]
-
-La clase propone utilizar el precio como una **fracción del valor creado**, aproximadamente entre un décimo y un tercio como referencia inicial. Con un problema estimado en $125.000 mensuales [H], un precio cercano a **$24.990 mensuales** representa aproximadamente un 20 % de ese valor. [H]
-
----
-
-## Paquetes y precio
-
-| Bueno — **Independiente**               | Mejor — **Pyme**                                                                     | Óptimo — **Empresa**                                                                                     |                                                                                                                                                                             |
-| --------------------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Para quién**                          | Trabajador independiente o microempresa con pocos trabajos mensuales                 | Pyme contratista que cotiza y ejecuta trabajos regularmente                                              | Empresa con varios proyectos, responsables y necesidad de mayor control                                                                                                     |
-| **Cotizaciones / trabajos gestionados** | Hasta 10 al mes [H]                                                                  | Hasta 40 al mes [H]                                                                                      | Sin límite definido para el piloto [H]                                                                                                                                      |
-| **Usuarios**                            | 1 usuario [H]                                                                        | Hasta 5 usuarios [H]                                                                                     | Hasta 15 usuarios [H]                                                                                                                                                       |
-| **Qué incluye**                         | Cotizaciones, catálogo propio, partidas, costos y comparación Cotizado vs. Ejecutado | Todo lo anterior + historial completo, órdenes de trabajo, dashboard, roles y rubro personalizado “Otro” | Todo lo anterior + múltiples responsables, reportes avanzados, prioridad de soporte y acceso ampliado a información del ÍndicePartidas cuando exista suficiente información |
-| **Qué lo separa del anterior**          | Funciones esenciales para un contratista individual                                  | Más trabajos, usuarios, historial y control de empresa                                                   | Mayor capacidad, administración y analítica                                                                                                                                 |
-| **Precio mensual (más IVA)**            | **$9.990 [H]**                                                                       | **$24.990 [H]**                                                                                          | **$59.990 [H]**                                                                                                                                                             |
-| **Precio anual (con descuento)**        | **$99.900 + IVA [H]**                                                                | **$249.900 + IVA [H]**                                                                                   | **$599.900 + IVA [H]**                                                                                                                                                      |
-
-### Tramos de tamaño
-
-Los paquetes se diferencian principalmente por el volumen de trabajos gestionados y por la estructura de la empresa.
-
-Como referencia complementaria, la clase indica que en Chile pueden utilizarse los tramos de la Ley 20.416:
-
-- Microempresa: hasta 2.400 UF anuales.
-    
-- Pequeña empresa: hasta 25.000 UF anuales.
-    
-- Mediana empresa: hasta 100.000 UF anuales.
-    
-
-Sin embargo, para ÍndicePartidas consideramos más comprensible para el cliente utilizar como principal métrica la **cantidad de cotizaciones y trabajos gestionados al mes**, porque corresponde directamente al uso y valor obtenido de la plataforma. [H]
-
-### Prueba o piloto
-
-Sí.
-
-Se propone realizar un **piloto con fecha de término y precio declarado**, evitando un modelo freemium permanente.
-
-- Duración propuesta: **30 días [H]**.
-    
-- Precio posterior informado desde el inicio: **$24.990 + IVA mensuales para el paquete Pyme [H]**.
-    
-- Durante el piloto se observará si el usuario registra cotizaciones y costos reales y si manifiesta un compromiso concreto frente al precio.
-    
-
-El piloto puede ser gratuito únicamente como experimento y a cambio de permitir medir el uso, pero el usuario deberá conocer desde el comienzo cuál será el precio posterior. [H]
+Los límites y diferencias funcionales son propuestas comerciales pendientes de validación.
 
 ---
 
-## Justificación del precio del paquete del medio
+# 4. Modalidades de pago
 
-El paquete **Pyme de $24.990 + IVA mensuales [H]** es el paquete que se espera que concentre la mayor parte de los clientes.
+E-01 y E-02 manifestaron preferencia por disponer de opciones mensuales, semestrales y anuales.
 
-|Fuente|Dato|De dónde sale|
+También consideran importante que los períodos más largos incluyan descuentos.
+
+## Plan Independiente
+
+|Modalidad|Precio base|Ahorro|
 |---|---|---|
-|Lo que el cliente gasta hoy en el problema|Aproximadamente **$125.000 mensuales [H]** solamente considerando tiempo de cotización para el escenario utilizado|E-01 + supuestos declarados [H]|
-|Lo que cobra la alternativa principal|Excel puede adquirirse por aproximadamente **$179.990 como licencia individual**, mientras APU Chile ofrece herramientas desde aproximadamente **$54.990**, según el levantamiento realizado por el equipo|`competencia.md`|
-|Barrera observada en alternativas|E-02 investigó software especializado y desistió debido a su alto precio|E-02|
-|Fracción del valor del problema que captura el precio|$24.990 / $125.000 ≈ **20 % [H]**|cálculo|
-|Preferencia de forma de pago|Un entrevistado indicó preferir una **suscripción mensual con reportes**|E-03|
-|Lo que alguien estuvo dispuesto a hacer frente a un precio|**Todavía no validado con un precio concreto**|pendiente de experimento|
+|Mensual|$9.990|—|
+|Semestral|$49.990|$9.950|
+|Anual|$99.900|$19.980|
 
-### Por qué $24.990 y no otro valor
+Los valores se presentan antes de IVA, manteniendo el criterio del modelo de precios original.
 
-El precio no se obtiene del costo de desarrollar el software, porque el costo marginal de atender a un cliente adicional en un SaaS es relativamente bajo.
+### Cálculo semestral
 
-Tampoco se copia directamente el valor de la competencia.
+Seis mensualidades:
 
-Se propone inicialmente **$24.990 + IVA mensuales [H]** porque:
+6 × $9.990 = $59.940.
 
-1. representa aproximadamente un **20 % del valor mensual estimado del problema** en el escenario utilizado [H];
-    
-2. queda considerablemente por debajo de algunas alternativas especializadas identificadas;
-    
-3. E-02 mostró que el precio del software es una barrera real, por lo que el paquete principal debe mantenerse accesible;
-    
-4. la suscripción mensual coincide con la modalidad preferida por E-03;
-    
-5. permite que el cliente conserve la mayor parte del valor económico generado.
-    
+Precio semestral:
 
-El precio todavía debe considerarse una **hipótesis**, porque ningún entrevistado ha enfrentado aún una decisión real de contratación a $24.990 mensuales.
+$49.990.
 
----
+Ahorro:
 
-## Segunda línea de negocio: ÍndicePartidas
+$59.940 - $49.990 = $9.950.
 
-La tesis del desafío plantea que el software de cotización permite capturar información, pero el activo de mayor valor a largo plazo corresponde a los **datos agregados de costos y rendimientos reales**.
+Descuento aproximado: **16,6 %**.
 
-Por ello se considera una segunda línea de negocio dirigida a:
+### Cálculo anual
 
-- aseguradoras;
-    
-- tasadores;
-    
-- inmobiliarias;
-    
-- mandantes;
-    
-- contratistas generales que necesitan comparar precios de especialidades.
-    
+Doce mensualidades:
 
-E-03 mostró interés en pagar mediante suscripción por información agregada y reportes, especialmente si se complementa con un directorio de contratistas. [E-03]
+12 × $9.990 = $119.880.
 
-Sin embargo:
+Precio anual:
 
-- E-05 mostró que una empresa constructora puede valorar más sus propios datos que los datos de competidores. [E-05]
-    
-- todavía no existe suficiente evidencia para establecer un precio concreto para el acceso profesional al índice.
-    
+$99.900.
 
-Por lo tanto, el precio de esta segunda línea se mantiene **[H]** y deberá validarse después de demostrar que existe suficiente volumen y confiabilidad de datos.
+Ahorro:
 
-**Modelo futuro propuesto [H]:**
+$119.880 - $99.900 = $19.980.
 
-- Suscripción profesional mensual para acceso a reportes del índice.
-    
-- Segmentación de datos por rubro, partida, zona y período.
-    
-- Exportación de reportes.
-    
-- Directorio voluntario de prestadores.
-    
-- Precio diferenciado respecto del SaaS utilizado por los contratistas.
-    
+Descuento aproximado: **16,7 %**.
+
+Los descuentos semestrales y anuales son prácticamente equivalentes.
+
+Se recomienda evaluar una diferencia mayor para incentivar la contratación anual.
+
+Los precios semestrales de los planes Pyme y Empresa permanecen pendientes de definición.
 
 ---
 
-## Experimento de precio
+# 5. Prueba gratuita
 
-- **Creemos que** un pequeño contratista o dueño de pyme estaría dispuesto a contratar el paquete **Pyme por $24.990 + IVA mensuales [H]** si la plataforma le permite crear cotizaciones, registrar costos reales y conocer automáticamente sus desviaciones y rentabilidad.
+Las entrevistas E-01 y E-02 muestran preferencia por un período de prueba gratuito de 30 días.
+
+El objetivo de este período será permitir que los usuarios:
+
+1. Configuren su empresa.
     
-- **Para verificarlo:** presentaremos una propuesta simple con las funciones incluidas y el precio mensual claramente visible. Se solicitará una **firma de intención** para participar en un piloto posterior al desarrollo o, si es posible, aceptar un piloto pagado.
+2. Carguen componentes y precios.
     
-- **Mediremos:** cuántas personas realizan una acción concreta frente al precio:
+3. Generen cotizaciones.
     
-    - firman una carta/intención de participación;
-        
-    - solicitan iniciar el piloto;
-        
-    - entregan datos de contacto para contratar cuando esté disponible;
-        
-    - o aceptan realizar un pago/piloto pagado.
-        
-- **Tenemos razón si:** al menos **2 de 5 potenciales clientes [H]** realizan una acción de compromiso concreta frente al precio de $24.990 + IVA mensuales antes del **9 de noviembre de 2026 [H]**.
+4. Registren costos reales.
     
-- **Cuándo y con quién:** antes del 9 de noviembre de 2026, idealmente con contratistas independientes y pequeñas empresas similares a los perfiles E-01 y E-02.
+5. Comparen resultados.
+    
+6. Evalúen si el software se adapta a su trabajo.
     
 
-> Preguntar simplemente “¿pagarías $24.990?” no se considerará evidencia suficiente. Se medirá una acción observable frente al precio.
+Al comenzar la prueba se deberá informar claramente el precio posterior.
+
+La conversión al finalizar los 30 días debe medirse mediante un experimento real.
 
 ---
 
-## Lo que todavía es [H]
+# 6. Justificación del precio del paquete Pyme
 
-- La cantidad promedio de **10 cotizaciones mensuales** utilizada para estimar el escenario.
+Se propone un precio mensual de $24.990 + IVA.
+
+Considerando el escenario estimado de $125.000 mensuales asociados al tiempo de cotización:
+
+$24.990 / $125.000 ≈ 20 %.
+
+El precio representaría aproximadamente un 20 % del valor mensual estimado del problema.
+
+Esta comparación es orientativa, porque los supuestos económicos todavía necesitan validación.
+
+---
+
+# 7. Validación de precios
+
+## Evidencia obtenida
+
+E-01 y E-02 manifestaron conformidad con los precios presentados.
+
+También prefirieron:
+
+- Prueba gratuita de un mes.
     
-- El valor de **$10.000 por hora** utilizado para monetizar el tiempo del contratista.
+- Pagos mensuales.
     
-- El valor mensual estimado del problema de **$125.000**.
+- Pagos semestrales.
     
-- Los límites de 10 y 40 trabajos mensuales de los paquetes.
+- Pagos anuales.
     
-- Los límites de usuarios por paquete.
+- Descuentos por mayor período de contratación.
     
-- Los precios de **$9.990, $24.990 y $59.990**.
+
+## Interpretación
+
+Las entrevistas respaldan cualitativamente la aceptación del esquema comercial.
+
+Sin embargo, no demuestran disposición efectiva a pagar.
+
+Esta deberá comprobarse mediante contratos, pagos, compromisos verificables o conversión después del piloto.
+
+---
+
+# 8. Segunda línea de negocio
+
+El ÍndicePartidas agregado podría comercializarse posteriormente como una fuente de información para:
+
+- Contratistas generales.
     
-- El descuento anual propuesto.
+- Tasadores.
     
-- Que $24.990 sea un precio suficientemente bajo para un contratista pequeño y suficientemente alto para sostener el negocio.
+- Aseguradoras.
     
-- Que la cantidad de cotizaciones/trabajos gestionados sea la mejor métrica de valor.
+- Inmobiliarias.
     
-- El precio y modelo comercial del acceso profesional al ÍndicePartidas.
+- Mandantes.
     
-- La disposición real a contratar después de enfrentar un precio concreto.
+- Profesionales que revisan presupuestos.
     
-- Que al menos 2 de 5 usuarios realicen un compromiso concreto en el experimento de precio.
+
+E-03 manifestó interés en disponer de:
+
+1. Precios actualizados.
+    
+2. Cantidad de registros.
+    
+3. Valores mínimos y máximos.
+    
+4. Información segmentada.
+    
+5. Directorio de prestadores.
+    
+
+El precio de esta segunda línea todavía no se encuentra validado.
+
+---
+
+# 9. Experimento de precio
+
+## Creemos que
+
+Los contratistas encontrarán valor suficiente en ÍndicePartidas para contratar una suscripción después de conocer sus funciones y utilizar el producto.
+
+## Para verificarlo
+
+Se ofrecerá una prueba de 30 días con el precio posterior informado.
+
+## Mediremos
+
+- Cantidad de usuarios que activan el producto.
+    
+- Cantidad de cotizaciones generadas.
+    
+- Cantidad de trabajos registrados.
+    
+- Frecuencia de uso.
+    
+- Solicitudes de contratación.
+    
+- Conversiones a planes pagados.
+    
+
+## Criterio original de precio
+
+El experimento inicial estableció como criterio obtener al menos dos compromisos verificables entre cinco potenciales clientes.
+
+Las entrevistas verbales no son suficientes para considerar cumplido dicho criterio.
+
+---
+
+# 10. Hipótesis pendientes
+
+- Disposición efectiva a pagar.
+    
+- Conversión al finalizar el período gratuito.
+    
+- Límites de cotizaciones.
+    
+- Cantidad adecuada de usuarios por plan.
+    
+- Sostenibilidad de los descuentos.
+    
+- Precio adecuado del plan Pyme.
+    
+- Precio de la segunda línea de negocio.
+    
+- Retención de clientes.
+    
+- Costo de adquisición.
+    
+
+---
+
+# 11. Conclusión
+
+Las entrevistas respaldan cualitativamente la estructura de precios propuesta y la conveniencia de incorporar una prueba gratuita de 30 días.
+
+Se recomienda mantener los planes Independiente, Pyme y Empresa, agregando modalidades mensuales, semestrales y anuales.
+
+La siguiente etapa deberá comprobar si la aceptación declarada se transforma efectivamente en contratación y uso recurrente.

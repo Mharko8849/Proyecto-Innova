@@ -1,130 +1,216 @@
 # Punto de vista — Grupo 1 — Desafío: ÍndicePartidas
 
+
 ## Con quién hablamos
 
-| Código | Rol y sector                                                                          | Fecha        | ¿Propia o del banco? |
-| ------ | ------------------------------------------------------------------------------------- | ------------ | -------------------- |
-| E-01   | Contratista independiente de instalación de vidrios y ventanas                        | 02-10-2026   | Propia               |
-| E-02   | Maestro contratista independiente de obras menores, terminaciones y remodelación      | 02-10-2026   | Propia               |
-| E-03   | Contratista general (Construccion y electricidad)                                     | 03-10-2026   | Propia               |
-| E-04   | Profesional de finanzas e ingeniería con experiencia en pyme y servicios industriales | 03-10-2026   | Propia               |
-| E-05   | Constructor Civil con experiencia en presupuestos, cubicaciones y APU                 | Octubre 2026 | Propia               |
+| Código | Rol y sector                                                                                     | Fecha        |
+| ------ | ------------------------------------------------------------------------------------------------ | ------------ |
+| E-01   | Contratista independiente de vidriería                                                           | 02-10-2026   |
+| E-02   | Contratista independiente según entrevista inicial; pyme de vidriería según validación posterior | 02-10-2026   |
+| E-03   | Contratista general de construcción y electricidad                                               | 03-10-2026   |
+| E-04   | Profesional de finanzas e ingeniería                                                             | 03-10-2026   |
+| E-05   | Constructor Civil                                                                                | Octubre 2026 |
+| E-06   | Florería                                                                                         | No realizada |
 
-## Mapas de empatía
+Las entrevistas E-01 a E-05 corresponden a información recopilada por el equipo.
 
-### E-01 — Contratista independiente de vidriería
+E-06 corresponde únicamente a un escenario simulado para explorar la opción «Otro».
 
-- **Dice:** “Poco, ya que soy yo el único que hace todo.”
+---
+
+# Mapas de empatía
+
+## E-01 — Contratista independiente
+
+### Dice
+
+"Poco, ya que soy yo el único que hace todo."
+
+### Hace
+
+Prepara cotizaciones manualmente y ejecuta personalmente los trabajos.
+
+### Piensa
+
+Necesita herramientas que simplifiquen sus actividades sin aumentar el trabajo administrativo.
+
+### Siente
+
+Preocupación por los sobrecostos y por mantener protegida su información comercial.
+
+---
+
+## E-02 — Contratista / Pyme
+
+### Dice
+
+"No, no lo comparo, no sé realmente cuál es mi margen de ganancia."
+
+### Hace
+
+Prepara cotizaciones utilizando métodos manuales y no realiza comparaciones sistemáticas de costos.
+
+### Piensa
+
+Una herramienta digital puede ser útil si es accesible, sencilla y reduce trabajo.
+
+### Siente
+
+Frustración por errores de cálculo y preocupación por el costo de programas especializados.
+
+---
+
+## E-03 — Contratista general
+
+### Dice
+
+"Una de las desventajas que considero es que se depende de la buena fe de las empresas."
+
+### Hace
+
+Compara precios históricos y solicita presupuestos a diferentes prestadores.
+
+### Piensa
+
+El índice puede ser útil si contiene datos confiables, actualizados y representativos.
+
+### Siente
+
+Desconfianza frente a estadísticas generadas con información que no ha sido verificada.
+
+---
+
+## E-04 — Profesional de finanzas
+
+### Dice
+
+"Muchas empresas quiebran por no hacer los presupuestos como corresponde."
+
+### Hace
+
+Analiza costos, precios históricos, márgenes y riesgos económicos.
+
+### Piensa
+
+La confiabilidad de las estimaciones es fundamental para la sostenibilidad empresarial.
+
+### Siente
+
+Preocupación por las pérdidas económicas provocadas por presupuestos incorrectos.
+
+---
+
+## E-05 — Constructor Civil
+
+### Dice
+
+"En la construcción, el presupuesto es una apuesta, una apuesta que puede ser buena o mala."
+
+### Hace
+
+Utiliza cubicaciones, APU, información histórica y herramientas de planificación.
+
+### Piensa
+
+El registro de datos debe adaptarse a las responsabilidades del personal y ser muy sencillo.
+
+### Siente
+
+Preocupación por las desviaciones y la confidencialidad de la información empresarial.
+
+---
+
+# Patrones
+
+## Se repite
+
+- Uso de métodos manuales y planillas.
     
-- **Hace:** realiza personalmente cotizaciones y trabajos. Cotiza manualmente, no realiza una comparación sistemática al finalizar y detecta los sobrecostos cuando debe comprar materiales adicionales o aparece un imprevisto.
+- Falta de comparación entre costos cotizados y reales.
     
-- **Piensa:** _inferencia / hipótesis:_ cualquier herramienta que le quite demasiado tiempo en terreno probablemente será abandonada.
+- Necesidad de mejorar la precisión de los presupuestos.
     
-- **Siente:** _inferencia / hipótesis:_ preocupación por perder dinero debido a imprevistos y temor a que la información compartida permita identificarlo o perjudicarlo comercialmente.
+- Importancia de la información histórica.
+    
+- Dificultad para mantener precios actualizados.
+    
+- Necesidad de interfaces simples.
+    
+- Preocupación por la privacidad comercial.
     
 
-### E-02 — Maestro contratista de obras menores
+## Nos sorprendió
 
-- **Dice:** “No, no lo comparo, no sé realmente cuál es mi margen de ganancia.”
+1. Algunos contratistas desconocen completamente su margen real de ganancia.
     
-- **Hace:** prepara presupuestos en cuaderno, dedica varias horas a cotizar y descubre errores de cálculo cuando el dinero disponible queda demasiado ajustado frente a los materiales necesarios.
+2. El tiempo destinado a registrar costos puede representar una barrera importante.
     
-- **Piensa:** _inferencia / hipótesis:_ conocer el margen real sería útil, siempre que obtener esa información no implique aumentar mucho su trabajo administrativo.
+3. Las empresas grandes no necesariamente están interesadas en adquirir información de sus competidores.
     
-- **Siente:** _inferencia / hipótesis:_ frustración frente a errores de cubicación y rechazo a pagar por software cuyo costo considera alto.
+4. Los contratistas generales pueden encontrar valor en un directorio de prestadores.
     
-
-### E-03 — Contratista general / coordinador de obras
-
-- **Dice:** “Preferiría una suscripción mensual con reportes, pero una de las desventajas que considero es que se depende de la buena fe de las empresas.”
+5. Los usuarios de vidriería prefieren configurar productos por componentes en lugar de utilizar modelos predeterminados.
     
-- **Hace:** compara presupuestos de distintos maestros y utiliza experiencia previa para decidir si un precio es razonable.
-    
-- **Piensa:** _inferencia / hipótesis:_ un índice podría ser útil si los datos son confiables y además facilita encontrar especialistas disponibles.
-    
-- **Siente:** _inferencia / hipótesis:_ desconfianza respecto de información de mercado que no tenga mecanismos de validación.
+6. Los entrevistados manifiestan interés en disponer de prueba gratuita y descuentos por períodos de suscripción mayores.
     
 
-### E-04 — Profesional de finanzas e ingeniería
+---
 
-- **Dice:** “Muchas empresas quiebran por no hacer los presupuestos como corresponde.”
-    
-- **Hace:** utiliza información histórica y criterios financieros para estructurar presupuestos y destaca la importancia de mantener precios actualizados y controlar el flujo de caja.
-    
-- **Piensa:** _inferencia / hipótesis:_ la rapidez de cotizar tiene menos valor que disponer de información histórica confiable que evite vender bajo costo.
-    
-- **Siente:** _inferencia / hipótesis:_ preocupación por el impacto financiero que puede producir una mala estimación en una pyme.
-    
+# Punto de vista
 
-### E-05 — Constructor Civil
+**Un contratista independiente o dueño de una pequeña empresa que prepara y ejecuta trabajos necesita conocer sus costos reales y reutilizar esa información para elaborar mejores cotizaciones, porque actualmente utiliza registros dispersos, puede desconocer su rentabilidad y repetir errores de presupuestación.**
 
-- **Dice:** “En la construcción, el presupuesto es una apuesta, una apuesta que puede ser buena o mala.”
-    
-- **Hace:** trabaja con APU, cubicaciones, precios históricos y presupuestos a suma alzada. Identifica al Administrador de Obra como responsable adecuado para registrar costos y cantidades.
-    
-- **Piensa:** _inferencia / hipótesis:_ una herramienta nueva solo tendrá posibilidades de adopción si es extremadamente intuitiva y protege los márgenes de la empresa.
-    
-- **Siente:** _inferencia / hipótesis:_ preocupación por entregar información que posteriormente pueda ser utilizada por competidores para reducir precios.
-    
+Los hallazgos posteriores permiten ampliar esta perspectiva:
 
-## Patrones
+**Los usuarios también necesitan configurar productos mediante componentes reutilizables, mantener privados sus costos internos y generar cotizaciones comerciales claras y rápidas.**
 
-### Se repite
+Por otra parte, los contratistas que subcontratan trabajos necesitan consultar información de precios actualizada y confiable, además de encontrar prestadores adecuados para sus proyectos.
 
-- Las cotizaciones todavía dependen fuertemente de procesos manuales, planillas, cuadernos o históricos propios.
+---
+
+# ¿Cómo podríamos...?
+
+1. ¿Cómo podríamos permitir que un contratista registre sus costos reales sin aumentar significativamente su trabajo administrativo?
     
-- La información de trabajos anteriores no siempre se utiliza de forma sistemática para mejorar el siguiente presupuesto.
+2. ¿Cómo podríamos reutilizar información de trabajos anteriores para mejorar las cotizaciones futuras?
     
-- Existen desviaciones entre lo presupuestado y lo realmente ejecutado.
+3. ¿Cómo podríamos construir un índice de precios confiable sin revelar información comercial privada?
     
-- Los contratistas pequeños no siempre saben cuál fue su margen real.
+4. ¿Cómo podríamos permitir que diferentes rubros configuren productos mediante componentes y fórmulas reutilizables?
     
-- Registrar información adicional en terreno genera resistencia si el proceso requiere demasiado tiempo.
+5. ¿Cómo podríamos detectar valores incorrectos o anómalos antes de incorporarlos al índice?
     
-- La facilidad de uso es fundamental para lograr adopción.
-    
-- Existe preocupación por la confidencialidad de costos y márgenes.
-    
-- Los datos históricos son considerados más valiosos cuando permiten tomar mejores decisiones futuras.
+6. ¿Cómo podríamos facilitar el contacto entre contratistas y prestadores mediante un directorio voluntario?
     
 
-### Nos sorprendió
+---
 
-- Inicialmente pensábamos que cualquier trabajador podría registrar costos en terreno, pero E-05 indicó que esa función debería recaer principalmente en el Administrador de Obra o Jefe de Terreno.
-    
-- Suponíamos que los contratistas pequeños conocían aproximadamente su rentabilidad después de cada trabajo, pero E-02 declaró directamente no saber cuál es su margen real.
-    
-- Creíamos que el principal valor sería cotizar más rápido, pero E-04 mostró que evitar errores y utilizar costos históricos confiables puede tener mayor impacto.
-    
-- Pensábamos que las constructoras serían compradores naturales del índice, pero E-05 mostró poco interés en datos de competidores, mientras E-03 sí encontró valor y agregó la necesidad de un directorio de prestadores.
-    
+# Qué preguntar en la próxima conversación
 
-## Punto de vista
-
-**Un contratista pequeño o trabajador independiente que cotiza y ejecuta trabajos** necesita **conocer de forma simple cuánto le costó realmente cada trabajo y utilizar esa experiencia para preparar mejores presupuestos futuros**, porque **actualmente dedica tiempo a cotizar, pero muchas veces no realiza un análisis posterior y descubre las pérdidas o errores cuando el trabajo ya está ejecutado**.
-
-- **Basado en:** E-01, E-02, E-04 y E-05.
+1. ¿Cuánto demora realmente configurar una ventana y generar una cotización?
     
-- **¿Qué parte es hipótesis?:** que un proceso digital suficientemente simple logrará que el contratista registre esta información de manera recurrente. Este supuesto debe validarse mediante el experimento.
+2. ¿Qué componentes necesitan estar configurados previamente?
     
-
-## ¿Cómo podríamos...?
-
-1. ¿Cómo podríamos permitir que un contratista registre el costo real de un trabajo sin transformarlo en una nueva carga administrativa?
+3. ¿Qué información deberían mostrar las cotizaciones comerciales?
     
-2. ¿Cómo podríamos utilizar los trabajos anteriores para advertir al usuario cuando una nueva cotización presenta riesgo de estar subestimada?
+4. ¿Qué datos estarían dispuestos a registrar después de ejecutar un trabajo?
     
-3. ¿Cómo podríamos construir un índice útil de costos y rendimientos sin revelar la identidad, clientes ni márgenes comerciales de quienes aportan los datos?
+5. ¿Contratarían un plan después de utilizar la prueba gratuita?
+    
+6. ¿Qué información necesitan para confiar en los valores del ÍndicePartidas?
+    
+7. ¿Estarían dispuestos a publicar voluntariamente su información profesional?
     
 
-## Qué preguntar en la próxima conversación
 
-- ¿Cuál es la cantidad mínima de información que estaría dispuesto a registrar después de ejecutar un trabajo?
-    
-- ¿En qué momento del día o del proceso sería más natural realizar ese registro?
-    
-- ¿Qué función concreta haría que utilizara ÍndicePartidas nuevamente después de preparar su primera cotización?
-    
-- ¿Qué información debería ocultarse obligatoriamente antes de permitir que sus datos alimenten un índice agregado?
-    
-- ¿Qué referencia del índice utilizaría realmente para cambiar el precio de una próxima cotización?
+---
+
+# Conclusión
+
+La propuesta de ÍndicePartidas debe combinar facilidad de uso, precisión económica y flexibilidad para diferentes especialidades.
+
+La cotización modular aparece como una necesidad relevante para vidriería, mientras que la confiabilidad de los precios y el directorio de prestadores representan oportunidades para el índice.
+
+Sin embargo, la validación de estas funcionalidades requiere pruebas reales de uso, tiempo y contratación.
+
+El objetivo principal continúa siendo permitir que los usuarios comparen lo presupuestado con lo ejecutado y utilicen sus resultados históricos para mejorar futuras cotizaciones.

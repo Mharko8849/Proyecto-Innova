@@ -9,14 +9,14 @@
 ---
 # Resumen de entrevista — E-01
 
-| Campo | Contenido |
-|---|---|
-| **Código** | E-01 |
-| **Fecha y duración** | 02 de octubre de 2026, 25 minutos |
-| **Rol y sector** | Contratista independiente, instalación de vidrios y ventanas en construcción y remodelación (operador único) |
-| **Tipo** | Cliente objetivo |
-| **Equipo** | Grupo 1 — Desafío ÍndicePartidas |
-| **¿Autorizó compartir el resumen?** | Sí |
+| Campo                               | Contenido                                                                                                    |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| **Código**                          | E-01                                                                                                         |
+| **Fecha y duración**                | 02 de octubre de 2026, 25 minutos                                                                            |
+| **Rol y sector**                    | Contratista independiente, instalación de vidrios y ventanas en construcción y remodelación (operador único) |
+| **Tipo**                            | Cliente objetivo                                                                                             |
+| **Equipo**                          | Grupo 1 — Desafío ÍndicePartidas                                                                             |
+| **¿Autorizó compartir el resumen?** | Sí                                                                                                           |
 
 
 ## Qué preguntamos
@@ -44,14 +44,14 @@
 
 # Resumen de entrevista — E-02
 
-| Campo | Contenido |
-|---|---|
-| **Código** | E-02 |
-| **Fecha y duración** | 02 de octubre de 2026, 30 minutos |
-| **Rol y sector** | Maestro contratista independiente de obras menores, terminaciones y remodelación |
-| **Tipo** | Cliente objetivo |
-| **Equipo** | Grupo 1 — Desafío ÍndicePartidas |
-| **¿Autorizó compartir el resumen?** | Sí |
+| Campo                               | Contenido                                                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Código**                          | E-02                                                                                                 |
+| **Fecha y duración**                | 02 de octubre de 2026, 30 minutos                                                                    |
+| **Rol y sector**                    | Pyme, instalación de vidrios y ventanas en construcción y remodelación (operador único con ayudante) |
+| **Tipo**                            | Cliente objetivo                                                                                     |
+| **Equipo**                          | Grupo 1 — Desafío ÍndicePartidas                                                                     |
+| **¿Autorizó compartir el resumen?** | Sí                                                                                                   |
 
 ## Qué preguntamos
 
@@ -186,3 +186,6 @@
 - [x] No aparece el nombre de la persona ni el de su empresa
 - [x] No hay grabaciones adjuntas
 - [x] Si la persona pidiera que borremos su información, sabemos cómo hacerlo
+
+----
+

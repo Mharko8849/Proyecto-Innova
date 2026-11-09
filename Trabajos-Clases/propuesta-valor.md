@@ -1,233 +1,384 @@
-# Propuesta de valor — Grupo 1 — Desafío: ÍndicePartidas
+# Propuesta de valor — Grupo 1 — ÍndicePartidas
 
-## Actores
+# 1. Actores
 
-|Actor|Rol y sector|¿Hablamos con alguien así? (E-NN)|
+|Actor|Rol|Evidencia|
 |---|---|---|
-|Decide|Dueño de pyme / contratista independiente que prepara presupuestos y asume el resultado económico del trabajo|Sí — E-01, E-02|
-|Usa|Contratista independiente, Administrador de Obra o Jefe de Terreno que registra cotizaciones y ejecución|Sí — E-01, E-02, E-05|
-|Paga|Dueño de la pyme o contratista que decide adquirir la herramienta|Sí — E-02|
-|Recomienda|Constructor Civil, coordinador de obras, profesional técnico o experto que participa en presupuestos y control|Sí — E-03, E-04, E-05|
+|Decide|Contratista independiente o dueño de pyme|E-01, E-02|
+|Usa|Contratista, administrador o responsable de presupuestos|E-01, E-02, E-05|
+|Paga|Dueño del negocio o responsable de contratación|E-01, E-02|
+|Recomienda|Profesionales técnicos, administradores y contratistas generales|E-03, E-04, E-05|
 
-El perfil principal se construye desde el **dueño / contratista**, porque en empresas pequeñas muchas veces la misma persona decide, paga y utiliza la herramienta. [E-01, E-02]
+El cliente inicial será principalmente el contratista independiente o dueño de una pequeña empresa que prepara cotizaciones y necesita controlar sus costos.
 
 ---
 
-# Perfil del cliente — Dueño / Contratista independiente
+# 2. Perfil del cliente
 
 ## Trabajos
 
-1. **Preparar una cotización que cubra correctamente materiales, mano de obra, gastos y utilidad para no perder dinero en el trabajo.** [E-01, E-02, E-04]
+1. Preparar cotizaciones que cubran materiales, mano de obra, gastos y utilidad.
     
-2. **Mantener precios y antecedentes de trabajos anteriores disponibles para preparar nuevas cotizaciones sin comenzar nuevamente desde cero.** [E-02, E-04, E-05]
+2. Mantener información histórica de precios y trabajos anteriores.
     
-3. **Saber cuánto costó realmente ejecutar el trabajo y si obtuvo la utilidad que esperaba.** [E-01, E-02]
+3. Conocer el costo real después de ejecutar un proyecto.
     
-4. Modificar una cotización cuando el cliente cambia cantidades, trabajos o condiciones antes de aceptar. [E-01, E-02]
+4. Modificar cotizaciones cuando cambian las condiciones del cliente.
     
-5. Detectar rápidamente si un trabajo o una partida se está desviando de lo presupuestado. [E-01, E-05]
+5. Detectar desviaciones presupuestarias.
     
-6. Disponer de una referencia para saber si sus precios están razonablemente alineados con el mercado. [E-01, E-02]
+6. Comparar precios con referencias del mercado.
     
-
----
+7. Configurar productos y servicios mediante componentes específicos.
+    
 
 ## Frustraciones
 
-1. **No saber cuál fue realmente el margen de ganancia después de finalizar un trabajo.** E-02 declaró directamente no conocer su margen real. [E-02]
+1. Desconocer el margen de ganancia real.
     
-2. **Descubrir demasiado tarde que una cotización quedó mal calculada**, por errores de cubicación, materiales adicionales, mayor mano de obra o condiciones no previstas. E-01 reportó desviaciones de 20 % a 30 % en trabajos complejos. [E-01, E-02]
+2. Detectar errores de presupuesto cuando el trabajo ya está ejecutado.
     
-3. **Dedicar demasiado tiempo a cotizar y mantener precios manualmente.** E-01 tarda entre 30 minutos y 2 horas por cotización, mientras E-02 puede dedicar sesiones de 2 a 3 horas. [E-01, E-02]
+3. Dedicar demasiado tiempo a preparar cotizaciones.
     
-4. Trabajar con precios históricos que pueden quedar desactualizados frente a variaciones del mercado. [E-01, E-04, E-05]
+4. Utilizar precios históricos desactualizados.
     
-5. Tener información dispersa en cuadernos, archivos o planillas anteriores. [E-02, E-04]
+5. Mantener información dispersa en cuadernos o planillas.
     
-6. Que una aplicación nueva implique demasiado trabajo adicional en terreno. E-01 considera poco viable realizar registros frecuentes porque él mismo ejecuta todas las tareas. [E-01]
+6. Tener que registrar demasiada información manualmente.
     
-7. Pagar por un software especializado cuyo costo no se justifique para el tamaño de su negocio. [E-02]
+7. Pagar por software especializado que resulta costoso.
     
-8. Que terceros conozcan información sensible de su negocio, especialmente identidad, clientes, costos o márgenes comerciales. [E-01, E-05]
+8. Exponer información comercial sensible.
     
-
----
+9. No poder personalizar adecuadamente productos mediante catálogos predeterminados.
+    
 
 ## Alegrías
 
-1. **Saber con claridad cuánto ganó o perdió realmente en cada trabajo y por qué.** [E-01, E-02]
+1. Conocer cuánto ganó o perdió en cada trabajo.
     
-2. **Poder utilizar sus trabajos anteriores para cotizar mejor la próxima vez y evitar repetir errores.** [E-04, E-05]
+2. Utilizar información histórica para mejorar futuras cotizaciones.
     
-3. **Registrar información de forma rápida y sencilla, sin llenar numerosos campos ni transformar el control en otra tarea administrativa.** [E-02, E-05]
+3. Registrar información rápidamente.
     
-4. Poder comprobar si el precio que está calculando se encuentra dentro de valores razonables del mercado. [E-01, E-02]
+4. Consultar referencias de precios actualizadas.
     
-5. Tener sus partidas, materiales, precios y antecedentes ordenados en un mismo lugar. [H]
+5. Mantener materiales, partidas y precios organizados.
     
-6. Reducir el riesgo de aceptar un trabajo cuyo precio no cubra correctamente los costos. [E-04]
+6. Reducir errores de presupuestación.
     
-7. Mantener protegida su información comercial aun cuando aporte datos de manera anonimizada. [E-01, E-05]
+7. Proteger los costos y márgenes comerciales.
+    
+8. Generar cotizaciones personalizadas en pocos minutos.
+    
+9. Disponer de documentos comerciales claros sin mostrar el desglose interno.
     
 
 ---
 
-# Perfil del cliente — Administrador de Obra / Jefe de Terreno
+# 3. Perfil del Administrador de Obra
 
 ## Trabajos
 
-1. **Registrar cantidades y costos reales de la ejecución de manera simple y oportuna.** [E-05]
+- Registrar costos y cantidades reales.
     
-2. **Mantener trazabilidad entre las partidas presupuestadas y lo que efectivamente se está ejecutando.** [E-05]
+- Controlar desviaciones presupuestarias.
     
-3. **Informar avances, problemas e imprevistos detectados durante la ejecución.** [E-05]
+- Informar cambios e imprevistos.
     
-4. Facilitar información suficiente para que el contratista o dueño pueda analizar posteriormente la rentabilidad del proyecto. [H]
+- Mantener información disponible para evaluar resultados.
     
-
----
 
 ## Frustraciones
 
-1. **Tener que completar demasiada información administrativa mientras debe gestionar el trabajo en terreno.** [E-05]
+- Completar demasiados registros.
     
-2. **Utilizar herramientas complejas que los trabajadores no adoptan fácilmente.** E-05 indicó que la experiencia debería ser tan intuitiva como una herramienta cotidiana de comunicación. [E-05]
+- Utilizar herramientas complejas.
     
-3. Detectar errores o modificaciones durante la ejecución cuando corregirlos ya resulta más costoso. [E-05]
+- Duplicar información.
     
-
----
+- Detectar errores demasiado tarde.
+    
 
 ## Alegrías
 
-1. **Registrar una ejecución o incidencia en pocos pasos desde el teléfono.** [E-05]
+- Registrar información desde el teléfono.
     
-2. Poder adjuntar fotografías o notas rápidas para dejar evidencia del problema detectado. [E-05]
+- Reducir trabajo administrativo.
     
-3. Evitar duplicar información que ya existe en la cotización o en la Orden de Trabajo. [H]
+- Adjuntar observaciones.
+    
+- Consultar rápidamente el estado económico del trabajo.
     
 
 ---
 
-# Mapa de valor
+# 4. Mapa de valor
 
 ## Productos y servicios
 
-- Plataforma web de creación y gestión de cotizaciones.
+ÍndicePartidas será una plataforma web que permitirá:
+
+1. Crear cotizaciones.
     
-- Catálogo de partidas y estructuras de costos reutilizables.
+2. Administrar partidas.
     
-- Rubros inicialmente configurados para:
+3. Configurar productos mediante componentes.
     
-    - Construcción.
-        
-    - Electricidad.
-        
-    - Vidriería.
-        
-- Opción **“Otro”** para que el usuario cree una estructura personalizada de cotización. [H]
+4. Definir materiales, unidades y cantidades.
     
-- Gestión de materiales, mano de obra, unidades, cantidades y precios.
+5. Establecer fórmulas y márgenes.
     
-- Conversión de una cotización aceptada en trabajo u Orden de Trabajo.
+6. Generar documentos de cotización.
     
-- Registro simplificado del costo real ejecutado.
+7. Registrar costos reales.
     
-- Comparación automática Cotizado vs. Ejecutado.
+8. Comparar costos cotizados y ejecutados.
     
-- Historial de costos y trabajos anteriores.
+9. Consultar información histórica.
     
-- Dashboard básico de desviaciones y rentabilidad.
+10. Generar referencias agregadas de costos y rendimientos.
     
-- Índice agregado y anonimizado de costos y rendimientos. [H]
+11. Configurar rubros personalizados mediante la opción «Otro».
     
-- Directorio voluntario de prestadores como evolución posterior. [E-03]
+12. Incorporar posteriormente un directorio voluntario de prestadores.
     
 
 ---
 
-## Aliviadores de frustraciones
+# 5. Cotizador modular
 
-|Aliviador|Frustración que alivia|
+Las entrevistas E-01 y E-02 permitieron identificar la necesidad de configurar productos mediante componentes.
+
+Por ejemplo, al cotizar una ventana, el usuario podrá seleccionar:
+
+|Componente|Configuración|
 |---|---|
-|Comparación automática entre presupuesto y ejecución|Frustraciones 1 y 2|
-|Registro simplificado desde teléfono|Frustraciones 6 y 3 del Administrador de Obra|
-|Historial de partidas, costos y precios|Frustraciones 4 y 5|
-|Reutilización de estructuras de cotización|Frustraciones 3 y 5|
-|Advertencia sobre precios y cotizaciones antiguas|Frustración 4|
-|Cálculo de margen real después del trabajo|Frustraciones 1 y 2|
-|Roles y permisos para proteger información comercial|Frustración 8|
-|Uso anonimizado y voluntario de datos para el índice|Frustración 8|
-|Estructura simple y enfocada en pequeños contratistas|Frustraciones 6 y 7|
-|Conversión automática de cotización aceptada en trabajo activo|Reduce duplicación de información [H]|
+|Vidrio|Tipo y espesor|
+|Dimensiones|Ancho y alto|
+|Estructura|Aluminio o PVC|
+|Perfil|Línea correspondiente|
+|Manilla|Tipo o ausencia|
+|Rodamientos|Cantidad|
+|Accesorios|Según configuración|
+
+El sistema realizará los cálculos internos utilizando los componentes seleccionados.
+
+## Documento comercial
+
+La cotización final mostrará una descripción resumida.
+
+**Ejemplo:**
+
+Ventana de aluminio línea 5000.
+
+Medidas: 1,50 × 1,20 m.
+
+Precio: valor calculado.
+
+El detalle de materiales y costos internos permanecerá disponible exclusivamente para el usuario autorizado.
+
+**Estado:** necesidad respaldada por entrevistas; implementación pendiente de validación técnica.
 
 ---
 
-## Creadores de alegrías
+# 6. Aliviadores de frustraciones
 
-|Creador|Alegría que produce|
+|Funcionalidad|Problema que resuelve|
 |---|---|
-|Dashboard de resultado y desviación por trabajo|Alegría 1|
-|Histórico reutilizable de trabajos ejecutados|Alegría 2|
-|Registro rápido de ejecución|Alegría 3|
-|ÍndicePartidas con información agregada|Alegría 4|
-|Catálogo centralizado de partidas y recursos|Alegría 5|
-|Alertas y comparación con costos históricos|Alegría 6|
-|Anonimización y control de consentimiento|Alegría 7|
-|Configuración “Otro” reutilizable para diferentes rubros|Permite adaptar la plataforma a negocios distintos de los tres rubros iniciales [H]|
+|Comparación Cotizado vs. Ejecutado|Desconocimiento del resultado económico|
+|Historial de costos|Uso de información dispersa|
+|Registro simplificado|Exceso de trabajo administrativo|
+|Configurador modular|Falta de personalización|
+|Cálculos automáticos|Errores de cálculo|
+|Alertas de precios históricos|Información desactualizada|
+|Datos privados por empresa|Riesgo de confidencialidad|
+|Plantillas reutilizables|Tiempo destinado a cotizar|
+|Índice agregado|Falta de referencias del mercado|
 
 ---
 
-## Encaje
+# 7. Creadores de alegrías
 
-- **Lo que sí atendemos:**  
-    La propuesta se concentra principalmente en las tres frustraciones de mayor importancia:
-    
-    1. desconocimiento del margen real;
-        
-    2. errores que se descubren después de ejecutar;
-        
-    3. tiempo y desorden asociados al proceso de cotización.
-        
-    
-    También responde a las principales alegrías: conocer el resultado real del trabajo, aprender de la experiencia anterior y registrar información con poca fricción.
-    
-- **Lo que dejamos fuera a propósito, y por qué:**  
-    No se busca desarrollar inicialmente un ERP, sistema contable, facturación electrónica, remuneraciones, lectura automática de planos ni marketplace completo. Estas funciones ampliarían demasiado el alcance y no son necesarias para validar el problema central identificado en las entrevistas.
-    
-- **Cuántas de las tres primeras de cada lista son** `**[H]**`**:**
-    
-    - Trabajos principales: **0 de 3**.
-        
-    - Frustraciones principales: **0 de 3**.
-        
-    - Alegrías principales: **0 de 3**.
-        
-- **La** `**[H]**` **más importante:**  
-    Que, aunque los usuarios manifiestan interés en conocer sus costos reales, efectivamente estarán dispuestos a registrar de manera recurrente la información necesaria para obtenerlos.
-    
-    Esta sí corresponde al supuesto más riesgoso de `experimento.md` y se verificará mediante el experimento de registro simplificado.
-    
+|Funcionalidad|Beneficio|
+|---|---|
+|Panel de rentabilidad|Conocer ganancias y pérdidas|
+|Historial de ejecución|Aprender de trabajos anteriores|
+|Cotizador configurable|Personalización de productos|
+|Plantillas por rubro|Reutilización de información|
+|Índice de costos|Consultar referencias|
+|Rango de precios|Identificar dispersión de valores|
+|Directorio voluntario|Encontrar prestadores|
+|Documento comercial resumido|Presentar propuestas claras|
 
 ---
 
-## Frente a la competencia
+# 8. Confiabilidad del índice
 
-|Criterio|La alternativa de hoy|Nosotros|Acción|
-|---|---|---|---|
-|Facilidad de uso|Cuaderno y Excel son conocidos, pero dependen completamente del usuario|Flujo guiado y simplificado para cotizar y registrar ejecución|Incrementar|
-|Tiempo para preparar una nueva cotización|Muchas veces se reutilizan archivos o cálculos manuales|Reutilización de partidas, precios y configuraciones anteriores|Reducir|
-|Comparación Cotizado vs. Ejecutado|Generalmente manual o inexistente en pequeños contratistas|Comparación automática por partida|Crear|
-|Conocimiento del margen real|Puede no calcularse al finalizar|Cálculo utilizando costo real registrado|Crear|
-|Registro desde terreno|Fotos, mensajes, cuaderno o ningún registro formal|Registro mínimo desde teléfono|Incrementar|
-|Costo y complejidad|Software especializado puede resultar costoso o sobredimensionado para empresas pequeñas|Solución enfocada inicialmente en pequeños contratistas [H]|Reducir|
-|Uso de información histórica|Archivos y experiencia personal dispersa|Histórico estructurado reutilizable|Incrementar|
-|Información agregada del mercado|Solicitud manual de precios o experiencia propia|Índice agregado de costos y rendimientos [H]|Crear|
-|Confidencialidad|Los archivos propios permanecen privados, pero no generan información compartida|Datos privados por empresa y uso agregado solo bajo consentimiento|Incrementar|
-|Adaptabilidad a otros rubros|Excel es flexible, pero exige construir cada estructura manualmente|Construcción, Electricidad, Vidriería y opción “Otro” configurable [H]|Crear|
+E-03 identifica que los precios declarados incorrectamente pueden distorsionar el resultado del índice.
+
+Por esta razón, el sistema deberá considerar mecanismos para:
+
+- Detectar valores extremos.
+    
+- Identificar datos inconsistentes.
+    
+- Evitar registros duplicados.
+    
+- Diferenciar partidas comparables.
+    
+- Mostrar la cantidad de registros utilizados.
+    
+- Indicar la antigüedad de la información.
+    
+- Presentar rangos de precios.
+    
+
+Estas características constituyen requisitos futuros y todavía necesitan validación técnica.
 
 ---
 
-## La frase
+# 9. Directorio de prestadores
 
-**Para** contratistas independientes y pequeñas empresas que necesitan preparar presupuestos rentables y controlar sus trabajos, **ÍndicePartidas es** una plataforma de cotización y control de costos **que** conecta lo presupuestado con lo realmente ejecutado para mostrar desviaciones, rentabilidad y utilizar la experiencia anterior en futuras cotizaciones. **A diferencia de** trabajar únicamente con cuadernos, planillas o presupuestos antiguos, ÍndicePartidas cierra el ciclo entre **cotizar, ejecutar, comparar y aprender**, manteniendo un historial estructurado que posteriormente puede alimentar referencias agregadas y anonimizadas de costos reales.
+Las entrevistas permiten identificar interés por complementar ÍndicePartidas con un directorio voluntario.
+
+El directorio podrá incluir:
+
+- Nombre profesional o comercial.
+    
+- Especialidad.
+    
+- Comuna o región.
+    
+- Zonas donde trabaja.
+    
+- Información de contacto.
+    
+
+Los precios y costos individuales no serán publicados.
+
+La participación en el directorio será independiente de la autorización para aportar información anonimizada al índice.
+
+---
+
+# 10. Adaptabilidad a otros rubros
+
+ÍndicePartidas contempla especialidades predeterminadas:
+
+- Construcción.
+    
+- Electricidad.
+    
+- Vidriería.
+    
+
+También permitirá configurar la opción «Otro».
+
+La estructura deberá admitir:
+
+- Componentes personalizados.
+    
+- Unidades.
+    
+- Cantidades.
+    
+- Fórmulas.
+    
+- Porcentajes.
+    
+- Márgenes.
+    
+- Plantillas.
+    
+
+El caso simulado de florería permite explorar esta posibilidad, pero no representa validación real.
+
+---
+
+# 11. Encaje
+
+## Lo que sí atendemos
+
+Las principales necesidades identificadas son:
+
+1. Conocer la rentabilidad real.
+    
+2. Reducir errores presupuestarios.
+    
+3. Preparar cotizaciones utilizando información organizada.
+    
+4. Configurar productos según sus características.
+    
+5. Consultar referencias de costos.
+    
+
+## Lo que dejamos fuera inicialmente
+
+- Facturación electrónica.
+    
+- Contabilidad completa.
+    
+- Remuneraciones.
+    
+- Marketplace de contratación.
+    
+- ERP completo.
+    
+- Inteligencia artificial avanzada.
+    
+- Lectura automática de planos.
+    
+
+Estas funcionalidades aumentarían considerablemente el alcance del MVP.
+
+---
+
+# 12. Frente a la competencia
+
+|Criterio|Alternativas actuales|ÍndicePartidas|
+|---|---|---|
+|Cotizaciones|Manuales o mediante software|Cotizador configurable|
+|Costos reales|Registro manual|Registro estructurado|
+|Comparación|Generalmente manual|Automática|
+|Historial|Archivos dispersos|Base reutilizable|
+|Productos personalizados|Configuración manual|Componentes reutilizables|
+|Referencias de precios|Consulta externa|Índice agregado|
+|Prestadores|Búsqueda independiente|Directorio futuro|
+|Privacidad|Depende de cada herramienta|Separación entre datos privados y públicos|
+
+---
+
+# 13. La frase
+
+**Para** contratistas independientes y pequeñas empresas que necesitan preparar cotizaciones rentables y conocer los costos reales de sus trabajos, **ÍndicePartidas es** una plataforma de cotización y control de costos **que** permite configurar productos mediante componentes, comparar lo presupuestado con lo ejecutado y reutilizar información histórica para mejorar futuras cotizaciones.
+
+**A diferencia de** utilizar cuadernos, planillas aisladas o presupuestos antiguos, ÍndicePartidas conecta el ciclo de cotización, ejecución, comparación y aprendizaje, permitiendo posteriormente consultar referencias agregadas de costos y rendimientos reales.
+
+---
+
+# 14. Validación y conclusiones
+
+Las entrevistas respaldan cualitativamente la necesidad de mejorar las cotizaciones y el control económico de los trabajos.
+
+E-01 y E-02 identificaron la importancia de disponer de productos configurables mediante componentes.
+
+E-03 destacó la necesidad de referencias actualizadas, información confiable y un directorio de prestadores.
+
+## Pendiente de validar
+
+- Facilidad real de uso.
+    
+- Tiempo de cotización.
+    
+- Configuración de productos.
+    
+- Uso recurrente.
+    
+- Disposición efectiva a pagar.
+    
+- Calidad del índice.
+    
+- Adaptación a otros rubros.
+    
+
+La siguiente etapa debe centrarse en construir y probar un prototipo funcional.

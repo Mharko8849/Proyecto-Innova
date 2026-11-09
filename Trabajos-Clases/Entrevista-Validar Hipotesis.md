@@ -654,3 +654,63 @@ Las siguientes hipótesis requieren además una prueba técnica:
     
 5. **Que el canal de adquisición sea económicamente viable.**  
     Debe intentarse conseguir clientes reales por cada canal y posteriormente comparar su costo de adquisición.
+
+
+---
+
+# Resultados de validación posteriores — E-01, E-02 y E-03
+
+**Origen:** síntesis proporcionada por el equipo, posterior a entrevistas iniciales. No se aportaron transcripciones ni fecha exacta de esta nueva ronda; se registran como declaraciones, no como observación técnica del software.
+
+| Hipótesis | Evidencia obtenida | Estado |
+|---|---|---|
+| Aceptación del precio de los planes | E-01 (independiente de vidriería) y E-02 (pyme de vidriería) manifiestan conformidad con los precios y funciones presentados. | Aceptación declarada; contratación/pago pendiente [H]. |
+| Período de prueba | Ambos prefieren 30 días gratuitos para comprobar adecuación a su trabajo. | Preferencia declarada de 2 entrevistados; conversión posterior [H]. |
+| Periodicidad de cobro | Ambos prefieren opciones mensuales, semestrales y anuales con descuento por compromiso mayor. | Preferencia declarada; descuentos óptimos [H]. |
+| Cotización modular | Ambos requieren configurar ventanas por vidrio, espesor, dimensiones, material/perfil/línea, manilla y rodamientos; en el PDF solo mostrar concepto final, medidas y precio. | Necesidad de producto respaldada; implementación y facilidad de uso [H]. |
+| Tiempo de cotización | Según lo comunicado, con el sistema previamente configurado estiman que podrían cotizar en menos de 10 minutos. | Estimación declarada, no prueba cronometrada. |
+| Participación en el índice / directorio | E-01 y E-02 desean que figure información identificatoria profesional sin publicar sus precios individuales. | Preferencia declarada. Definir consentimiento y separación de datos [H]. |
+| Confiabilidad del índice | E-03 advierte posible distorsión por precios declarados artificialmente altos. | Riesgo identificado; eficacia de filtros [H]. |
+| Índice para nuevas cotizaciones | E-03 valora actualidad, cantidad de observaciones y rango mínimo–máximo de valores. | Utilidad declarada, uso real [H]. |
+| Directorio de prestadores | E-03 solicita rubros, comuna/zona de atención y contacto de independientes, pymes y empresas. | Interés declarado; demanda amplia/monetización [H]. |
+
+**Advertencia de consistencia:** el perfil E-02 del material anterior no es homogéneo; confirmar la caracterización de esta nueva entrevista antes de presentar resultados acumulados. No se comprobaron el experimento de registro de 30 segundos, la recurrencia ni las conversiones pagadas.
+
+---
+
+## E-06 — Florería:  opción «Otro»
+
+### 26. ¿Cómo calcula actualmente el precio de sus productos o servicios?
+
+Sumo flores, follaje, envoltorios o recipiente, mano de obra de armado, merma y gastos de entrega si corresponden. Después aplico un margen para determinar el precio de venta.
+
+### 27. ¿Qué datos necesita ingresar para preparar una cotización?
+
+Tipo de arreglo, cantidad de arreglos, flores y cantidades por variedad, precio de compra, follajes, base o florero, decoración, tiempo de armado, fecha del evento, dirección y costo de despacho.
+
+### 28. ¿Qué conceptos cambian de una cotización a otra?
+
+Variedad y cantidad de flores, disponibilidad y precio de temporada, tamaño del arreglo, personalización, cantidad de unidades, urgencia y distancia del despacho.
+
+### 29. ¿Qué conceptos permanecen normalmente iguales?
+
+Método de cálculo, catálogo de insumos, tipos de envoltorio, tiempo base por arreglo, estructura de gastos del negocio y márgenes orientativos, aunque sus valores puedan actualizarse.
+
+### 30. ¿Utiliza fórmulas, porcentajes, márgenes o cálculos automáticos?
+
+Sí: costo de insumos + armado + merma + gastos asociados; luego agrego un margen objetivo.
+
+Para eventos considero descuentos por volumen o recargos por urgencia. Me gustaría que los cálculos fueran automáticos y editables.
+
+### 31. ¿Qué unidades utiliza?
+
+Tallo, ramo, unidad, paquete, metro de cinta, hora, arreglo y despacho; ocasionalmente caja o docena.
+
+### 32. Si pudiera crear una plantilla propia de cotización, ¿qué debería poder configurar?
+
+Mis variedades de flores y precios actualizables, recetas de arreglos (componentes y cantidades), opciones de floreros y envoltorios, porcentaje de merma, tiempo de armado, margen, despacho por zona y descripción comercial simplificada para el cliente.
+
+### Hipótesis ilustrada
+
+Un mismo motor de componentes y reglas podría servir para ventanas y arreglos florales.
+
