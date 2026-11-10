@@ -678,7 +678,9 @@ Las siguientes hipótesis requieren además una prueba técnica:
 
 ---
 
-## E-06 — Florería:  opción «Otro»
+## Caso de modelado y simulación conceptual — Florería (Opción «Otro»)
+
+> **Nota metodológica:** Este apartado corresponde a un ejercicio de modelado conceptual realizado por el equipo para evaluar si la estructura de datos y cálculo de la opción «Otro» se adapta a un negocio no constructivo (venta y armado de arreglos florales). No corresponde a una entrevista real de campo E-NN ni sustituye las validaciones del segmento objetivo.
 
 ### 26. ¿Cómo calcula actualmente el precio de sus productos o servicios?
 
