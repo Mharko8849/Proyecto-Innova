@@ -1,0 +1,404 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=2.3cm}
+\definecolor{darkblue}{RGB}{20,40,80}
+\definecolor{prblue}{RGB}{52,152,219}
+\definecolor{prorange}{RGB}{230,126,34}
+\hypersetup{colorlinks=true, linkcolor=prblue, urlcolor=prblue}
+
+\newcommand{\ev}[1]{\textcolor{prblue}{[#1]}}
+\newcommand{\hip}{\textcolor{prorange}{[H]}}
+
+% ---- Datos del equipo (completar) ----------------------------------
+\newcommand{\grupo}{Grupo 1}
+\newcommand{\desafio}{4}
+\newcommand{\producto}{ÍndicePartidas}
+\newcommand{\integrantes}{Marco Ortiz \\ Angel Benavides \\ Hector Berguño \\ Vicente Carrillo \\ Martin Fuentes \\ Sarumi Mora \\ Luis Peluk}
+\newcommand{\repositorio}{https://github.com/Mharko8849/Proyecto-Innova}
+
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textcolor{darkblue}{\textbf{Informe PEP 1 --- \grupo\ --- \producto}}}
+\fancyhead[R]{\small\textcolor{darkblue}{I+E --- USACH --- Semestre 2, 2026}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ---- Portada --------------------------------------------------------
+\begin{titlepage}
+  \centering
+  \includegraphics[width=3.4cm]{Logo-Color-Usach-Web.jpg}\\[0.3cm]
+  {\large Universidad de Santiago de Chile}\\
+  {\large Departamento de Ingeniería Informática}\\[0.2cm]
+  {\normalsize Innovación y Emprendimiento --- Semestre 2, 2026}\\[1.4cm]
+  {\LARGE\bfseries\color{darkblue} Informe de la PEP 1}\\[0.4cm]
+  {\large Validación del problema y del modelo de negocio}\\[1.2cm]
+  {\Huge\bfseries \producto}\\[0.5cm]
+  {\large \grupo\ --- Desafío: \desafio}\\[1.2cm]
+  {\large\bfseries Integrantes}\\[0.3cm]
+  {\large \integrantes}\\[0.8cm]
+  {\normalsize Repositorio: \href{\repositorio}{Proyecto-Innova}}\\[0.2cm]
+  {\normalsize Profesor: Francisco Parra O.}\\[0.6cm]
+  \vfill
+  {\large 12 de noviembre de 2026}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% =====================================================================
+% Borrador PEP 1. En Overleaf, usar este archivo como documento principal.
+% Mantener junto a Logo-Color-Usach-Web.jpg y unit_economics.tex.
+\section*{Resumen}
+\addcontentsline{toc}{section}{Resumen}
+
+ÍndicePartidas aborda el problema de los contratistas que preparan una
+cotización y, al terminar el trabajo, tienen dificultades para saber
+cuánto les costó ejecutarlo. Dos casos de vidriería muestran cómo se
+manifiesta el problema: un independiente reportó desviaciones de entre
+20 y 30\,\% en faenas complejas, y una pyme declaró desconocer su margen
+real \ev{E-01}\,\ev{E-02}.
+
+La primera entrega propuesta conecta tres acciones: cotizar un trabajo,
+registrar su costo real y comparar ambos costos. Vidriería ofrece el
+punto de partida mejor documentado para probar ese recorrido. La
+decisión propuesta es perseverar con un flujo privado y acotado. El
+prototipo está en desarrollo y todavía queda por medir si los usuarios
+registran costos repetidamente y si contratan el servicio al precio
+propuesto \hip.
+
+\section{El problema}
+
+\subsection{Enunciado}
+El contratista independiente o responsable de una pyme de vidriería
+necesita cotizar trabajos a medida y saber si el precio cubrió los costos
+reales. E-01 tarda entre 30 minutos y 2 horas por cotización y detecta
+algunos sobrecostos durante la compra de insumos o frente a imprevistos de
+obra. E-02 cotiza en sesiones de 2 a 3 horas, usa un cuaderno y detecta
+errores de cubicación al pagar materiales. Las entrevistas documentan
+el problema durante la preparación y ejecución de trabajos, con tiempos
+y costos de casos concretos \ev{E-01}\,\ev{E-02}.
+
+\subsection{Reencuadre}
+El planteamiento inicial utilizaba la cotización para reunir información
+y construir un índice de costos. Las entrevistas hicieron visible un
+beneficio inmediato para quien registra los datos: conocer el resultado
+económico de su propio trabajo. El primer recorrido se centra por ello
+en la comparación privada. El índice sectorial queda como una
+oportunidad posterior, sujeta a participación voluntaria y calidad de
+los datos \ev{E-01}\,\ev{E-02}\,\ev{E-03}\,\hip.
+
+\subsection{Por qué vale la pena resolverlo}
+\begin{itemize}
+  \item \textbf{Dolor.} Los sobrecostos aparecen durante el trabajo y el
+  margen real puede quedar sin calcular \ev{E-01}\,\ev{E-02}.
+  \item \textbf{Frecuencia.} La preparación de presupuestos forma parte
+  de los trabajos descritos. Falta medir el volumen mensual y la
+  frecuencia de sobrecostos por cuenta \ev{E-01}\,\ev{E-02}\,\hip.
+  \item \textbf{Costo actual.} Hay tiempo invertido en preparar
+  cotizaciones. E-02 evaluó software especializado y lo descartó por su
+  precio. El gasto efectivo en suscripciones del segmento inicial
+  sigue sin cuantificarse \ev{E-01}\,\ev{E-02}\,\hip.
+  \item \textbf{Búsqueda de alternativas.} E-01 probó una planilla y
+  volvió al cálculo manual. E-02 evaluó software y siguió utilizando
+  un cuaderno \ev{E-01}\,\ev{E-02}.
+\end{itemize}
+
+\section{Validación con usuarios}
+
+\subsection{Con quién hablamos}
+La bitácora registra seis conversaciones y el archivo de resúmenes
+contiene cinco fichas con código. El contacto de climatización figura
+en la bitácora y queda pendiente incorporar su ficha al conjunto
+anonimizado. La simulación de florería se utilizó para explorar un rubro
+configurable. Las fechas que difieren entre archivos se indican en el
+anexo.
+
+\begin{tabularx}{\linewidth}{@{}lXll@{}}
+\toprule
+\textbf{Código} & \textbf{Rol y sector} & \textbf{Fecha} & \textbf{Tipo} \\
+\midrule
+E-01 & Contratista independiente de vidriería & 02/10/2026 & Cliente objetivo \\
+E-02 & Responsable de una pyme de vidriería & 02/10/2026 & Cliente objetivo \\
+E-03 & Contratista general de construcción y electricidad & Octubre de 2026 & Segundo cliente potencial \\
+E-04 & Profesional de ingeniería y finanzas, con experiencia en servicios técnicos & Octubre de 2026 & Experto \\
+E-05 & Constructor civil del sector edificación & Octubre de 2026 & Experto técnico \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Hallazgos que se repiten}
+Los dos casos de vidriería describen cotización manual y ausencia de una
+comparación sistemática al cierre \ev{E-01}\,\ev{E-02}. El tiempo
+disponible condiciona la captura: E-02 contempla registrar en terreno si
+el flujo exige pocos datos, mientras que E-05 apunta a una captura simple
+a cargo del administrador de obra \ev{E-02}\,\ev{E-05}. La
+confidencialidad también influye en la posibilidad de compartir datos:
+se mencionaron riesgos de identificación y exposición del margen
+\ev{E-01}\,\ev{E-05}.
+
+\subsection{Lo que nos sorprendió y lo que contradijo la hipótesis inicial}
+E-01 concentra la ejecución en una sola persona y considera difícil
+registrar a diario. E-05 indica que, en una obra con roles separados,
+el registro debería recaer en el administrador o jefe de terreno. El
+piloto debe distinguir quién registra y en qué momento puede hacerlo
+en cada tipo de organización \ev{E-01}\,\ev{E-05}\,\hip. E-03 pidió
+referencias verificables y contactos por especialidad, lo que abre una
+posible línea de producto para un segundo cliente \ev{E-03}\,\hip.
+
+\section{El experimento}
+
+\subsection{Tarjeta de prueba}
+\begin{description}[leftmargin=!,labelwidth=4cm]
+  \item[Creíamos que] Un registro móvil rápido y con pocos campos
+  permitiría capturar costos reales de manera recurrente \hip.
+  \item[Para verificarlo] Se diseñó un formulario con trabajo, partida,
+  cantidad ejecutada, materiales, costo real, horas y observación opcional.
+  \item[Mediremos] Participantes, cantidad de registros, tiempo,
+  necesidad de ayuda y recurrencia.
+  \item[Teníamos razón si] Al menos tres de cinco participantes hacían
+  tres registros y el 80\,\% de los registros se completaba en
+  30 segundos o menos.
+\end{description}
+Fuente del diseño y del criterio: \texttt{experimento.md}.
+
+\subsection{Ejecución}
+El prototipo está en desarrollo. El equipo realizará la prueba de
+registro cuando esté disponible. El piloto queda pendiente, junto con
+las mediciones de tiempo y recurrencia.
+
+\subsection{Tarjeta de aprendizaje}
+\textbf{Observamos} que el esfuerzo de registrar es una preocupación
+para los entrevistados \ev{E-01}\,\ev{E-02}\,\ev{E-05}.
+\textbf{Frente al criterio}, todavía faltan los datos del piloto.
+\textbf{Aprendimos} que la prueba debe considerar quién registra y
+cómo se inserta esa tarea en el trabajo. \textbf{Por lo tanto},
+mantendremos el criterio escrito y mediremos el uso en cuanto esté
+listo el prototipo.
+
+\section{Propuesta de valor y solución}
+
+\subsection{Perfil del cliente}
+\begin{tabularx}{\linewidth}{@{}lXXX@{}}
+\toprule
+\textbf{Actor} & \textbf{Trabajo} & \textbf{Frustración} & \textbf{Resultado esperado} \\
+\midrule
+Decisor de vidriería &
+Cotizar a medida y saber si el trabajo cubre sus costos \ev{E-01}\,\ev{E-02} &
+Recalcular a mano y descubrir sobrecostos tarde \ev{E-01}\,\ev{E-02} &
+Reutilizar componentes y conocer el resultado por trabajo \ev{E-01}\,\ev{E-02}\,\hip \\
+\addlinespace
+Administrador de obra &
+Registrar cantidades y costos de ejecución cuando existe un rol
+separado de administración \ev{E-05} &
+Dificultad de añadir una tarea de registro al trabajo en terreno \ev{E-05} &
+Capturar cantidades y costos mediante un flujo breve \ev{E-05}\,\hip \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Propuesta de valor}
+Para independientes y pymes de vidriería que cotizan trabajos a medida,
+ÍndicePartidas propone reutilizar componentes al presupuestar y mostrar
+la diferencia entre costo previsto y costo real al terminar el trabajo
+\ev{E-01}\,\ev{E-02}\,\hip. La cotización reutilizable busca reducir el
+recálculo, el registro breve busca reducir el esfuerzo de captura y la
+comparación entrega un dato para ajustar futuras cotizaciones \hip.
+Las alzas de proveedores y contingencias en terreno siguen siendo
+riesgos del trabajo \ev{E-01}.
+
+\subsection{Alcance del MVP}
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+\toprule
+\textbf{Problema} & \textbf{Función imprescindible propuesta} \\
+\midrule
+Rehacer cálculos en cada cotización \ev{E-01}\,\ev{E-02} &
+Preparar y aceptar una cotización a partir de una partida reutilizable \hip. \\
+Falta de un registro fácil de costos en ejecución \ev{E-01}\,\ev{E-02}\,\ev{E-05} &
+Registrar cantidad y costo real en un trabajo asociado a la cotización \hip. \\
+Dificultad para conocer la desviación al cierre \ev{E-01}\,\ev{E-02} &
+Comparar costo previsto y costo real en una vista privada \hip. \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Después.} Configuración avanzada de componentes, historial y
+versiones ampliadas, índice agregado y directorio, según lo que muestren
+las pruebas \hip.
+
+\textbf{Nunca dentro de este alcance.} ERP, remuneraciones y facturación
+electrónica, según el recorte de \texttt{problema-solucion.md}.
+
+\subsection{Mapa de historias y prototipo}
+La primera entrega recorre una partida de vidriería de principio a fin:
+preparar la cotización, marcarla como aceptada, abrir el trabajo,
+registrar un costo real y revisar la desviación. La maqueta de este
+recorrido está en desarrollo. Los montos de demostración deben quedar
+identificados como ejemplos.
+
+\subsection{Entrevistas de solución}
+El equipo cuenta con declaraciones sobre configuración modular, formato
+de cotización y prueba gratuita \ev{E-01}\,\ev{E-02}. Sigue pendiente
+documentar la interacción con el prototipo, los puntos de confusión y
+los pasos concretos que den los usuarios después de probarlo.
+
+\section{Modelo de negocio}
+
+\subsection{Business Model Canvas}
+\begin{tabularx}{\linewidth}{@{}lX@{}}
+\toprule
+\textbf{Bloque} & \textbf{Propuesta y evidencia} \\
+\midrule
+Segmentos & Independientes y pymes que cotizan trabajos, con vidriería como primer segmento a probar \ev{E-01}\,\ev{E-02}\,\hip. \\
+Propuesta de valor & Cotizar con componentes reutilizables y comparar costos privados \ev{E-01}\,\ev{E-02}\,\hip. \\
+Canales & Contacto directo y referidos como primeros canales de adquisición \hip. \\
+Relaciones & Autoservicio con ayuda para configurar la primera cotización \hip. \\
+Ingresos & Suscripción por cuenta. La contratación efectiva está pendiente \hip. \\
+Recursos & Plataforma, catálogo y datos históricos privados \hip. \\
+Actividades & Mantener el flujo de cotización y registro, resguardar datos y dar soporte \hip. \\
+Socios & Proveedores de alojamiento y procesamiento de pagos \hip. \\
+Costos & Operación de la plataforma, soporte, cobro, captación y desarrollo \hip. \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Pricing}
+La métrica propuesta es el volumen mensual de cotizaciones y trabajos
+gestionados \hip. Los precios propuestos en \texttt{Pricing.md} son
+\$9.990 para Independiente, \$24.990 para Pyme y \$59.990 para Empresa,
+mensuales antes de IVA \hip. Como referencia del costo del problema,
+\texttt{Pricing.md} estima \$125.000 mensuales en tiempo de cotización
+con diez cotizaciones al mes, 1,25 horas por cotización y una hora
+valorada en \$10.000 \hip. El tiempo por cotización se toma como
+punto medio del rango de E-01. El volumen y el valor de la hora son
+supuestos \ev{E-01}\,\hip. La estimación valora el tiempo dedicado.
+El ahorro alcanzable se medirá en el piloto \hip.
+
+E-01 utiliza cálculo manual tras intentar
+con planillas y E-02 descartó software especializado por su precio
+\ev{E-01}\,\ev{E-02}. \texttt{competencia.md} documenta licencias,
+herramientas de presupuestación y proveedores que cotizan individualmente.
+Esas ofertas tienen alcances y modalidades de pago distintos.
+
+La síntesis posterior recoge aceptación verbal y preferencia por
+una prueba gratuita de 30 días \ev{E-01}\,\ev{E-02}. El criterio de
+\texttt{Pricing.md} pide dos compromisos verificables entre cinco
+potenciales clientes. Con la evidencia disponible, ese criterio
+sigue pendiente de comprobar.
+
+\subsection{Unit economics}
+\input{unit_economics}
+
+\section{Lo que no se validó}
+\begin{itemize}
+  \item \textbf{Uso recurrente.} Ejecutar la tarjeta de prueba cuando
+  esté listo el prototipo y guardar tiempos, recurrencia y ayuda.
+  \item \textbf{Pago y retención.} Ofrecer el piloto con el precio
+  informado y registrar compromisos verificables, conversiones y bajas.
+  \item \textbf{Costo y esfuerzo real.} Pedir ejemplos recientes y
+  medir tiempo, costos directos y frecuencia de cotizaciones por cuenta.
+  \item \textbf{Índice agregado y nuevos rubros.} Probar disponibilidad
+  y calidad de los datos con consentimiento, y probar la configuración
+  con un negocio real de otro rubro.
+\end{itemize}
+
+\section{Cómo trabajó el equipo}
+
+\subsection{Decisiones y pivotes}
+El \href{https://github.com/Mharko8849/Proyecto-Innova}{repositorio del
+equipo} registra las versiones del proyecto. Las fechas siguientes
+corresponden a documentación registrada en Git.
+\begin{itemize}
+  \item \textbf{28 de octubre.} Se documentó el plan de un primer
+  recorrido privado, centrado en cotizar, registrar y comparar
+  (\texttt{8b93eb2}).
+  \item \textbf{3 de noviembre.} Se incorporaron el modelo de negocio,
+  los precios propuestos y el guion para comprobar las hipótesis
+  comerciales (\texttt{05313f5}).
+  \item \textbf{9 de noviembre.} Se actualizaron los trabajos de clase
+  con la síntesis complementaria sobre cotización modular, prueba
+  gratuita y confiabilidad del índice (\texttt{19bbd5e}).
+\end{itemize}
+
+\subsection{Uso de agentes}
+Se pidió a Codex revisar la guía, cruzar los archivos locales y preparar
+un borrador en LaTeX y un escenario de economía por cuenta. Para el
+borrador se contrastaron la bitácora, los resúmenes, la tarjeta de prueba,
+\texttt{Pricing.md} y el historial local. El equipo confirmó que E-02
+corresponde a una pyme de vidriería y que el experimento se realizará
+cuando esté disponible el prototipo. Los supuestos económicos están
+marcados \hip. La revisión del borrador completo por el equipo queda
+pendiente.
+
+\subsection{Reparto del trabajo}
+La bitácora atribuye conversaciones a Angel Benavides, Sarumi Mora y
+Marco Ortiz. El historial local registra aportes a los resúmenes de
+entrevista, diseño, arquitectura, base de datos, reglas, planificación y
+modelo comercial. El reparto final se completará con los aportes
+confirmados por cada integrante, incluido el trabajo fuera del repositorio.
+
+\clearpage
+\appendix
+\section{Bitácora de contactos}
+\textbf{Fuente.} \texttt{bitacora-contactos.md}. La bitácora local
+registra seis intentos, seis respuestas y seis conversaciones.
+La tabla resume los contactos sin identificar personas ni empresas.
+Las fechas de E-03 y E-04 requieren conciliar los registros. Para E-05
+se dispone del mes.
+
+\begin{tabularx}{\linewidth}{@{}llX@{}}
+\toprule
+\textbf{Registro} & \textbf{Fecha} & \textbf{Resultado del contacto} \\
+\midrule
+E-01 & 02/10/2026 & Entrevista a un independiente de vidriería sobre cotización manual y desviaciones. \\
+E-02 & 02/10/2026 & Entrevista a una pyme de vidriería sobre presupuesto, registro y margen. \\
+E-03 & Octubre de 2026 & Entrevista a un contratista general sobre referencias de costos y especialistas. \\
+E-04 & Octubre de 2026 & Entrevista a un profesional de ingeniería y finanzas sobre presupuestos e históricos. \\
+Climatización & 09/10/2026 & Entrevista a un contratista sobre actualización de precios y control de costos. \\
+E-05 & Octubre de 2026 & Entrevista a un constructor civil sobre presupuesto, ejecución y rol de captura. \\
+\bottomrule
+\end{tabularx}
+
+\section{Resúmenes de entrevista}
+\textbf{Fuente.} \texttt{resumen-entrevistas.md}. Las cinco fichas
+registran autorización para compartir un resumen. La conversación de
+climatización requiere una ficha propia y confirmación del consentimiento.
+
+\begin{description}
+  \item[E-01.] El independiente cotiza a mano, detecta desviaciones al
+  comprar materiales y considera difícil registrar diariamente cuando
+  él mismo ejecuta el trabajo.
+  \item[E-02.] La pyme cotiza con un cuaderno, desconoce su margen
+  efectivo y contempla registrar desde el teléfono si el formulario
+  es rápido y pide pocos datos.
+  \item[E-03.] El contratista general consulta históricos o solicita
+  cotizaciones a distintos especialistas. Le interesa un índice con
+  referencias confiables y contactos por especialidad.
+  \item[E-04.] El profesional destaca el valor de los históricos de
+  costos, el riesgo de cotizar por debajo del costo real y la necesidad
+  de validar cálculos asistidos por inteligencia artificial.
+  \item[E-05.] El constructor civil explica que en un contrato a suma
+  alzada los cambios se gestionan mediante partidas extraordinarias.
+  Propone que el administrador de obra registre los datos y pide
+  proteger los márgenes comerciales.
+\end{description}
+
+\section{Prototipo}
+El prototipo está en desarrollo. Este anexo incorporará las pantallas
+del primer recorrido y el registro de las pruebas de solución
+cuando estén disponibles.
+
+\section{Otros archivos del repositorio}
+Las fuentes de trabajo están en \texttt{Trabajos-Clases/}. El
+diseño técnico se documenta en \texttt{coding-template-main/}.
+El repositorio reúne los archivos citados en el cuerpo y su historial
+de cambios.
+
+\end{document}

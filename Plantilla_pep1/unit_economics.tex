@@ -1,0 +1,39 @@
+En ÍndicePartidas, una unidad es una cuenta que paga una suscripción.
+El objetivo de este cálculo es estimar cuánto dinero aporta esa cuenta
+y cuánto tarda en recuperar lo que costó conseguirla.
+
+\paragraph{Cuánto deja una cuenta al mes}
+Los precios propuestos en \texttt{Pricing.md} son \$9.990 para el plan
+Independiente y \$24.990 para el plan Pyme, ambos antes de IVA \hip.
+Si el 70\,\% de las cuentas usa el primer plan y el 30\,\% usa el segundo,
+el ingreso mensual promedio por cuenta (ARPA) es de \$14.490 \hip.
+Estimamos costos directos de \$2.500 por cuenta Independiente y \$6.000 por
+cuenta Pyme para operar el servicio, dar soporte y procesar el cobro.
+Con esa misma mezcla, atender una cuenta cuesta en promedio \$3.550 al mes
+\hip. La diferencia es una \textbf{contribución mensual de \$10.940 por
+cuenta}, equivalente al 75,5\,\% del ingreso \hip.
+
+\paragraph{Cuánto cuesta conseguir una cuenta}
+Si gastamos \$120.000 entre captación y atención de la prueba gratuita,
+y cuatro cuentas empiezan a pagar, cada cuenta cuesta \$30.000 de adquirir
+(CAC) \hip. Al dividir \$30.000 por los \$10.940 que deja cada mes,
+obtenemos un \textbf{plazo de recuperación de 2,74 meses} desde que la
+cuenta empieza a pagar \hip.
+
+\paragraph{Cuánto aporta antes de cancelar}
+Si cada mes cancela el 10\,\% de las cuentas que ya pagan
+(\textit{churn}) y esa proporción se mantiene, una cuenta permanece activa
+unos 10 meses en promedio \hip. En ese tiempo aporta cerca de \$109.400
+(LTV), es decir, 3,65 veces lo que cuesta conseguirla (LTV/CAC) \hip.
+Con esos supuestos, una cuenta cubre su costo de adquisición. Para saber
+si el negocio completo es rentable todavía hay que considerar los costos
+fijos de desarrollo y administración.
+
+\paragraph{Qué pasa si menos cuentas empiezan a pagar}
+Si con los mismos \$120.000 conseguimos solo dos cuentas pagadas, el costo
+por cuenta sube a \$60.000, la relación LTV/CAC baja a 1,82 y la recuperación
+tarda 5,48 meses \hip. En el piloto registraremos cuánto gastamos en
+captación y soporte, cuántas cuentas pasan de la prueba al pago y cuántas
+cancelan cada mes. Si convertir una cuenta a pago resulta más costoso de
+lo esperado, probaremos una configuración inicial guiada y mediremos si
+las conversiones adicionales compensan el tiempo de soporte.
