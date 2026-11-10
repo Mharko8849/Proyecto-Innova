@@ -50,7 +50,7 @@ Este plan reemplaza la guía extensa de siete integrantes. Se basa en el último
 
 **Coordinación:** el responsable 6 proporciona un recorrido estable; el 1 ayuda con contactos. Entregar resultados a 4, 5 y 6.
 
-## 3. Respaldar el negocio y comprobar compromiso frente al precio
+## 3. (LUIS) Respaldar el negocio y comprobar compromiso frente al precio
 
 **Responsable 3, con apoyo para contactar clientes.** Agrupa sostenibilidad del negocio y disposición efectiva a pagar.
 
