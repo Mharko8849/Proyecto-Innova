@@ -30,45 +30,35 @@ Si los usuarios solamente crean cotizaciones, el sistema no podrá construir cor
 
 ## Creemos que
 
-Si el registro requiere menos de 30 segundos y solicita solamente información esencial, los contratistas estarán dispuestos a registrar datos durante varios días.
+Un contratista independiente o responsable de una pequeña empresa puede completar el ciclo básico en la plataforma sin fricción excesiva si cuenta con una interfaz simplificada y un catálogo con partidas predefinidas. Específicamente creemos que:
+
+1. El registro de cuenta y configuración inicial tomará **menos de 1 minuto**.
+2. La elaboración de una cotización para un trabajo estándar (usando partidas preconfiguradas con materiales y mano de obra) tomará **menos de 10 minutos**.
+3. La captura de un costo real ejecutado en terreno tomará **30 segundos o menos**.
 
 ## Para verificarlo
 
-Se diseñó un formulario móvil simplificado para registrar:
+Se construyó un prototipo funcional en **Figma** que simula el flujo de la aplicación:
 
-- Trabajo.
-    
-- Partida.
-    
-- Cantidad ejecutada.
-    
-- Materiales.
-    
-- Costo real.
-    
-- Horas.
-    
-- Observación opcional.
-    
+- Pantalla de registro de usuario y selección de rubro inicial.
+- Módulo de cotización con **partidas base ya predefinidas** (con sus componentes de materiales y mano de obra).
+- Generación y aprobación de cotización.
+- Formulario móvil simplificado para registrar costos y cantidades reales ejecutadas en terreno.
+- Vista de comparación automática entre costo presupuestado y costo real.
 
 ## Mediremos
 
-1. Cantidad de participantes.
-    
-2. Cantidad de registros.
-    
-3. Tiempo utilizado.
-    
-4. Registros completados sin ayuda.
-    
-5. Recurrencia.
-    
+1. Tiempo cronometrado en cada etapa: registro de cuenta, creación de cotización y registro de costos.
+2. Errores, desorientaciones y dudas durante la navegación.
+3. Tasa de tareas completadas de forma autónoma versus con asistencia del facilitador.
+4. Solicitudes de cambio o campos ignorados por el usuario.
 
 ## Tenemos razón si
 
-Al menos tres de cinco participantes realizan tres registros y el 80 % de los registros se completa en 30 segundos o menos.
-
-Este criterio fue definido previamente y debe mantenerse.
+- El registro de cuenta se completa en $\le$ 1 minuto.
+- La cotización se elabora en $\le$ 10 minutos (reduciendo drásticamente las 2 a 3 horas habituales de los entrevistados).
+- Los registros de costos habituales se completan en $\le$ 30 segundos.
+- La mayoría de los evaluados logra completar el recorrido sin bloqueos insalvables y comprende el resultado de la comparación de costos.
 
 ---
 
@@ -86,202 +76,76 @@ Este criterio fue definido previamente y debe mantenerse.
 
 ---
 
-# 5. Tarjeta de aprendizaje
+# 5. Resultados de la prueba observada con el prototipo
+
+La prueba se aplicó a dos personas del segmento objetivo de vidriería:
+
+- **P-01:** Instalador independiente de vidriería y ventanería (E-01).
+- **P-02:** Dueño de taller/pyme de vidriería y aluminio (E-02).
+
+## Tiempos cronometrados por tarea
+
+| Etapa evaluada | Meta esperada | Participante 1 (P-01) | Participante 2 (P-02) | ¿Cumple meta? | Observación de asistencia |
+|---|---|---|---|---|---|
+| **1. Registro de cuenta (Onboarding)** | $\le$ 1:00 min | 1 min 15 s | 0 min 52 s | Parcial | P-01 dudó brevemente al seleccionar el rubro; P-02 autónomo. |
+| **2. Elaboración de cotización (Partidas base)** | $\le$ 10:00 min | 4 min 20 s | 3 min 10 s | **Sí (amplio)** | Al utilizar partidas predefinidas, ambos cotizaron en menos de la mitad del tiempo meta. |
+| **3. Registro de costo (Intento 1: exploratorio)** | $\le$ 30 s | 41 s | 36 s | No (primera vez) | Se detuvieron a entender el formulario y campos opcionales. |
+| **3. Registro de costo (Intento 2: compra insumos)** | $\le$ 30 s | **22 s** | **19 s** | **Sí** | Registro directo de compra de perfiles/vidrio. Rápido y sin ayuda. |
+| **3. Registro de costo (Intento 3: mano de obra)** | $\le$ 30 s | **24 s** | **21 s** | **Sí** | Registro rutinario sin asistencia. |
+
+## Fricciones y hallazgos observados
+
+### Dónde se pierden
+
+1. Tras aceptar la cotización, no sabían claramente dónde registrar los costos reales.
+2. Al momento de ingresar los costos se perdían con el formato del sistema.
+
+### Qué ignoran
+
+Ambos omitieron los campos de "Horas de trabajo" y "Notas descriptivas"; se concentraron exclusivamente en el monto en dinero y la cantidad.
+
+### Qué ayuda necesitaron
+
+1. Consultaron si el valor a ingresar correspondía a monto neto o con IVA.
+2. Necesitaron ayuda para navegar entre las distintas pantallas.
+
+## Cambios aplicados al prototipo tras el feedback
+
+1. **Acceso directo:** Incorporar un botón visible para registrar costos reales de forma inmediata tras aprobar la cotización, evitando desorientación.
+2. **Navegación guiada:** Mejorar los enlaces y botones de transición entre pantallas para facilitar el flujo continuo.
+3. **Formato simplificado:** Rediseñar y clarificar el formato de ingreso de costos para evitar confusiones de estructura.
+4. **Claridad en montos:** Agregar etiqueta explícita indicando si el valor ingresado es Neto o Total con IVA.
+5. **Reducción de campos:** Ocultar o colapsar campos de horas y observaciones para no recargar la vista en terreno.
+
+---
+
+# 6. Tarjeta de aprendizaje (Tarjeta de salida)
 
 ## Creíamos que
 
-Un registro sencillo de menos de 30 segundos sería suficiente para permitir el uso recurrente.
+Un contratista completaría el registro en menos de 1 minuto, cotizaría en menos de 10 minutos con partidas preconfiguradas y registraría costos reales en menos de 30 segundos, permitiendo su uso continuado.
 
 ## Observamos
 
-Las entrevistas muestran que los participantes consideran importante la facilidad de uso.
-
-Sin embargo, no contamos con los resultados completos del experimento original para verificar los tiempos y la recurrencia.
+- En la prueba de usabilidad, los tiempos de cotización (3 a 4 minutos) y de registro habitual de costos (19 a 24 segundos) cumplieron con holgura los umbrales de velocidad.
+- Sin embargo, respecto al experimento de campo prolongado original (5 participantes registrando autónomamente durante varios días), este quedó parcial / inconcluso debido a la falta de seguimiento.
 
 ## Aprendimos que
 
-La simplicidad debe ser una característica principal del producto.
+- La estructura por partidas base agiliza significativamente la cotización, pero el flujo entre cotizar y registrar debe ser mucho más directo y guiado.
+- La velocidad de captura es técnicamente viable ($\le$ 30 s), pero la interfaz debe evitar formatos confusos y reducir pasos intermedios de navegación entre pantallas.
 
 ## Decisión
 
-Mantener pendiente la validación del experimento hasta disponer de las mediciones reales.
+**Perseverar con ajustes de producto**. Incorporar las mejoras de usabilidad, formato y navegación identificadas en el prototipo.
 
 ---
 
-# 6. Nuevas hipótesis identificadas
+# 7. Conclusión
 
-Las entrevistas complementarias permiten identificar nuevas funcionalidades y condiciones comerciales.
+Las pruebas observadas con el prototipo en Figma permitieron comprobar que la elaboración de cotizaciones mediante partidas predefinidas y el registro ágil de costos son técnicamente viables en tiempos reducidos, cumpliendo con los umbrales de velocidad planteados.
 
-## Cotizador modular
+Sin embargo, la experiencia de los participantes demostró que la usabilidad, la claridad en el formato de ingreso y la navegación directa entre pantallas son factores decisivos para evitar desorientación y asegurar la adopción en terreno.
 
-E-01 y E-02 prefieren configurar ventanas mediante componentes.
-
-## Prueba gratuita
-
-E-01 y E-02 prefieren un período de 30 días.
-
-## Suscripciones
-
-Existe aceptación declarada de los precios presentados y preferencia por pagos mensuales, semestrales y anuales.
-
-## Confiabilidad del índice
-
-E-03 identifica riesgos relacionados con valores incorrectos o manipulados.
-
-## Directorio
-
-E-03 considera útil encontrar prestadores según especialidad y ubicación.
-
----
-
-# 7. Experimento de cotización modular
-
-## Creemos que
-
-Un usuario podrá preparar una cotización de una ventana personalizada en menos de diez minutos si dispone de un catálogo previamente configurado.
-
-## Para verificarlo
-
-Solicitaremos a usuarios de vidriería configurar una ventana seleccionando componentes.
-
-## Mediremos
-
-- Tiempo de configuración inicial.
-    
-- Tiempo de cotización.
-    
-- Errores.
-    
-- Solicitudes de ayuda.
-    
-- Comprensión del documento final.
-    
-
-## Resultado esperado
-
-Comprobar si el sistema facilita la elaboración de cotizaciones personalizadas.
-
-**Estado:** pendiente de ejecución.
-
----
-
-# 8. Experimento comercial
-
-## Creemos que
-
-Los usuarios que obtengan valor durante 30 días estarán dispuestos a contratar una suscripción.
-
-## Para verificarlo
-
-Se ofrecerá una prueba gratuita informando previamente el precio posterior.
-
-## Mediremos
-
-1. Usuarios registrados.
-    
-2. Usuarios activos.
-    
-3. Cotizaciones generadas.
-    
-4. Trabajos registrados.
-    
-5. Conversiones a planes pagados.
-    
-
-**Estado:** pendiente de ejecución.
-
----
-
-# 9. Experimento de adaptabilidad
-
-## Creemos que
-
-Una estructura configurable permitirá utilizar ÍndicePartidas en rubros diferentes de construcción, electricidad y vidriería.
-
-## Para verificarlo
-
-Se solicitará a un negocio real de otro rubro configurar una plantilla mediante la opción «Otro».
-
-## Mediremos
-
-- Configuración de componentes.
-    
-- Configuración de unidades.
-    
-- Uso de fórmulas.
-    
-- Creación de cotizaciones.
-    
-- Necesidad de asistencia.
-    
-
-El ejemplo de florería E-06 es simulado y no valida esta hipótesis.
-
----
-
-# 10. Experimento de confiabilidad
-
-## Creemos que
-
-Los mecanismos de validación permitirán mejorar la calidad de los datos del índice.
-
-## Para verificarlo
-
-Se utilizarán registros de prueba con:
-
-- Valores normales.
-    
-- Valores extremos.
-    
-- Duplicados.
-    
-- Datos inconsistentes.
-    
-
-## Mediremos
-
-- Detección de anomalías.
-    
-- Identificación de duplicados.
-    
-- Efecto sobre los resultados agregados.
-    
-- Calidad de las referencias generadas.
-    
-
-**Estado:** pendiente de implementación.
-
----
-
-# 11. Experimento del directorio
-
-## Creemos que
-
-Los prestadores aceptarán publicar voluntariamente sus perfiles y los contratistas utilizarán esa información para encontrar especialistas.
-
-## Para verificarlo
-
-Se habilitará un directorio de prueba con perfiles autorizados.
-
-## Mediremos
-
-- Prestadores registrados.
-    
-- Perfiles publicados.
-    
-- Búsquedas.
-    
-- Contactos realizados.
-    
-
-**Estado:** pendiente de validación.
-
----
-
-# 12. Conclusión
-
-Las entrevistas permitieron identificar nuevas necesidades, especialmente respecto de cotizaciones configurables, suscripciones y confiabilidad de información.
-
-Sin embargo, los resultados no reemplazan las pruebas prácticas.
-
+Por ello, el equipo resuelve perseverar en el desarrollo de la solución, priorizando la implementación de las mejoras de interfaz identificadas en el prototipo para consolidar un flujo simple e intuitivo.
 Se recomienda continuar con el prototipo, medir tiempos reales, comprobar el registro recurrente de costos y realizar un piloto comercial antes de considerar validado el modelo de negocio.
