@@ -46,17 +46,17 @@ No obstante, todavía no existe evidencia suficiente para considerar validado el
 
 # 3. Business Model Canvas
 
-|Bloque|Contenido|
+|Bloque|Propuesta y evidencia|
 |---|---|
-|Segmentos de clientes|Contratistas independientes, pymes y empresas especializadas. Futuramente, usuarios de información agregada de costos.|
-|Propuesta de valor|Cotización configurable, control Cotizado vs. Ejecutado e historial de costos reales.|
-|Canales|Venta directa, sitio web, referidos y asociaciones profesionales [H].|
-|Relaciones con clientes|Autoservicio asistido, configuración inicial y soporte.|
-|Fuentes de ingreso|Suscripciones mensuales, semestrales y anuales; futura suscripción profesional al índice [H].|
-|Recursos clave|Plataforma, base de datos, catálogo de componentes, información histórica y equipo de desarrollo.|
-|Actividades clave|Desarrollo, cotizaciones, registro de costos, análisis de datos, soporte y validación de información.|
-|Socios clave|Infraestructura cloud, servicios web, pasarela de pagos y posibles asociaciones [H].|
-|Estructura de costos|Desarrollo, mantenimiento, alojamiento, almacenamiento, soporte y adquisición de clientes.|
+|Segmentos de clientes|Contratistas independientes y pymes de servicios técnicos/instalaciones que cotizan trabajos a medida; vidriería como primer segmento validado [E-01][E-02]. Futuramente, contratistas generales y tasadores que consultan referencias agregadas [E-03][H].|
+|Propuesta de valor|Cotización ágil con componentes reutilizables, registro de costo real en terreno y comparación privada Cotizado vs. Ejecutado para conocer el margen real [E-01][E-02][H]. Futuro índice de mercado sectorial [E-03][H].|
+|Canales|Contacto y venta directa, referidos del rubro y sitio web de autoservicio [H]. Asociaciones gremiales y directorio de especialistas en fases posteriores [E-03][H].|
+|Relaciones con clientes|Autoservicio asistido, soporte personalizado para configurar la primera cotización y acompañamiento inicial [H].|
+|Fuentes de ingreso|Suscripciones SaaS mensuales, semestrales y anuales ($9.990 Independiente, $24.990 Pyme y $59.990 Empresa) [H]. Aceptación de precios declarada en [E-01][E-02]; contratación y pago efectivo pendiente de validar en piloto [H]. Futura suscripción al índice [E-03][H].|
+|Recursos clave|Plataforma web/móvil, catálogo de partidas y APU, base de datos de costos históricos privados y motor de componentes [H].|
+|Actividades clave|Mantener la plataforma, facilitar registro rápido en terreno (< 30s), resguardar la confidencialidad de márgenes comerciales y soporte al usuario [H].|
+|Socios clave|Proveedores de infraestructura cloud (Render/PostgreSQL), pasarelas de pago (Transbank/Flow/Mercado Pago) [H]. Futuras asociaciones de contratistas y distribuidores [H].|
+|Estructura de costos|Infraestructura cloud prorrateada ($1.150 a $2.000/cuenta), comisiones de pasarela (~3,2 %), tiempo de soporte técnico y captación/onboarding ($120.000 CAC estimado) [H].|
 
 ---
 
