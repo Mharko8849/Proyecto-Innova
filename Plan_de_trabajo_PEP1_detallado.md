@@ -19,13 +19,13 @@ Este plan reemplaza la guía extensa de siete integrantes. Se basa en el último
 
 **Responsable 1**
 
-- [ ] Completar el resumen de la entrevista de **climatización**: hay seis conversaciones en bitácora, pero cinco resúmenes.
-- [ ] Corregir fechas inconsistentes de E-03/E-04 y precisar E-05 si existe respaldo.
-- [ ] Aclarar el perfil de E-02 y fechar los seguimientos de entrevistas.
-- [ ] Separar la **florería simulada** de las entrevistas reales y resolver el uso del código E-06.
-- [ ] Confirmar consentimiento y publicación de los resúmenes en el banco del curso.
-- [ ] Incorporar **`guion-entrevista.md`**, identificando el material existente que corresponde a ese entregable.
-- [ ] Eliminar textos de plantilla y matizar afirmaciones exageradas como “plenamente validado” o “las constructoras no pagarían”.
+- [x] Completar el resumen de la entrevista de **climatización**: incorporado como **E-06** en `resumen-entrevistas.md` y sincronizado en la bitácora.
+- [x] Corregir fechas inconsistentes de E-03/E-04 y precisar E-05 si existe respaldo.
+- [x] Aclarar el perfil de E-02 y fechar los seguimientos de entrevistas.
+- [x] Separar la **florería simulada** de las entrevistas reales y resolver el uso del código E-06.
+- [x] Confirmar consentimiento y publicación de los resúmenes en el banco del curso.
+- [x] Incorporar **`guion-entrevista.md`**, creado como documento oficial a partir del material existente.
+- [x] Eliminar textos de plantilla y matizar afirmaciones exageradas como “plenamente validado” o “las constructoras no pagarían”.
 
 **Archivos afectados:** `Trabajos-Clases/bitacora-contactos.md`, `resumen-entrevistas.md`, `Entrevista-Validar Hipotesis.md`, documentos que los citan y el guion faltante.
 
