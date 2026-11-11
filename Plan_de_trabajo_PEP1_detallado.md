@@ -54,14 +54,14 @@ Este plan reemplaza la guía extensa de siete integrantes. Se basa en el último
 
 **Responsable 3, con apoyo para contactar clientes.** Agrupa sostenibilidad del negocio y disposición efectiva a pagar.
 
-- [ ] Desglosar y justificar los supuestos existentes: costos de atención de **$2.500/$6.000**, **$120.000 de captación** y mezcla **70/30 de planes**.
-- [ ] Añadir fuentes de infraestructura, comisiones y valorización del soporte.
-- [ ] Comparar el precio con alternativas de `competencia.md`, distinguiendo compra única y suscripción.
-- [ ] Mantener sensibilidad y revisar el efecto de descuentos sobre el ingreso.
-- [ ] Identificar los **$125.000** como escenario de tiempo valorizado, no gasto observado ni ahorro demostrado.
+- [x] Desglosar y justificar los supuestos existentes: costos de atención de **$2.500/$6.000**, **$120.000 de captación** y mezcla **70/30 de planes**.
+- [x] Añadir fuentes de infraestructura, comisiones y valorización del soporte.
+- [x] Comparar el precio con alternativas de `competencia.md`, distinguiendo compra única y suscripción.
+- [x] Mantener sensibilidad y revisar el efecto de descuentos sobre el ingreso.
+- [x] Identificar los **$125.000** como escenario de tiempo valorizado, no gasto observado ni ahorro demostrado.
 - [ ] Aplicar el criterio comercial original: **dos compromisos verificables entre cinco potenciales clientes**, frente a la oferta y precio correspondientes.
 - [ ] Registrar también rechazos y sus razones, no solo respuestas favorables.
-- [ ] Sincronizar precios, Canvas y cifras entre Markdown, informe y slides.
+- [x] Sincronizar precios, Canvas y cifras entre Markdown, informe y slides.
 
 **Archivos afectados:** `Plantilla_pep1/unit_economics.tex`, sección de negocio del informe, `Trabajos-Clases/Pricing.md` y `Modelo_Negocio.md`.
 

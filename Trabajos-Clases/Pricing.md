@@ -173,11 +173,37 @@ También prefirieron:
 
 ## Interpretación
 
-Las entrevistas respaldan cualitativamente la aceptación del esquema comercial.
+Las entrevistas respaldan cualitativamente la aceptación del esquema comercial [E-01][E-02].
 
 Sin embargo, no demuestran disposición efectiva a pagar.
 
-Esta deberá comprobarse mediante contratos, pagos, compromisos verificables o conversión después del piloto.
+Esta deberá comprobarse mediante contratos, pagos, compromisos verificables o conversión después del piloto [H].
+
+## Comparación con alternativas del mercado
+
+| Alternativa | Precio | Modalidad | Cierra el ciclo Cotizar → Registrar → Comparar |
+|---|---|---|---|
+| Microsoft Excel | $179.990 | Compra única | No — el usuario construye y mantiene las planillas a mano [E-01] |
+| APU Chile | Desde $54.990 | Compra única | No — solo presupuesto y base de datos, sin registro de ejecución |
+| Presto | Cotizar (licencia empresa) | Licencia de alto costo | Sí, pero orientado a grandes constructoras y obra civil [competencia.md] |
+| Procore / Buildertrend | Cotizar (suscripción) | Suscripción empresarial | Sí, pero excede las necesidades y presupuesto de pymes pequeñas [competencia.md] |
+| **ÍndicePartidas** | **$9.990 – $24.990 + IVA/mes** | **Suscripción mensual accesible** | **Sí — diseñado específicamente para independientes y pymes de especialidad** [H] |
+
+La propuesta de ÍndicePartidas es la única solución con suscripción mensual de bajo costo que cubre el recorrido continuo (presupuestar, registrar costo real en terreno y comparar desviaciones), resolviendo la brecha que hoy dejan las planillas manuales y el software corporativo [E-02][competencia.md].
+
+## Resultado del experimento de precio (compromisos verificables)
+
+**Objetivo comercial:** Obtener **dos compromisos verificables con pymes del sector**, presentando la oferta del plan Pyme ($24.990 + IVA/mes) tras los 30 días de prueba gratuita.
+
+| Contacto | Fecha | Perfil | Oferta presentada | Resultado |
+|---|---|---|---|---|
+| Pyme-01 | _pendiente_ | _pendiente_ | Plan Pyme $24.990 + 30 días gratis | _pendiente_ |
+| Pyme-02 | _pendiente_ | _pendiente_ | Plan Pyme $24.990 + 30 días gratis | _pendiente_ |
+
+- **Compromisos obtenidos:** _pendiente_ / 2
+- **Rechazos y razones:** _pendiente_
+
+> **Nota metodológica:** Un compromiso verificable corresponde a una confirmación concreta (por escrito, correo o mensajería) en la que el decisor manifiesta su aceptación a participar en el piloto con el precio informado. Las declaraciones verbales de simpatía hacia el producto registradas en entrevistas exploratorias previas no constituyen prueba de compromiso de pago.
 
 ---
 
