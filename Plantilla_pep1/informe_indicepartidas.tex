@@ -10,17 +10,22 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{array}
+\usepackage{longtable}
 
 \geometry{a4paper, margin=2.3cm}
 \definecolor{darkblue}{RGB}{20,40,80}
 \definecolor{prblue}{RGB}{52,152,219}
 \definecolor{prorange}{RGB}{230,126,34}
+\definecolor{lightgray}{RGB}{245,245,245}
 \hypersetup{colorlinks=true, linkcolor=prblue, urlcolor=prblue}
 
 \newcommand{\ev}[1]{\textcolor{prblue}{[#1]}}
 \newcommand{\hip}{\textcolor{prorange}{[H]}}
 
-% ---- Datos del equipo (completar) ----------------------------------
+% ---- Datos del equipo --------------------------------------------------
 \newcommand{\grupo}{Grupo 1}
 \newcommand{\desafio}{4}
 \newcommand{\producto}{ÍndicePartidas}
@@ -35,7 +40,7 @@
 
 \begin{document}
 
-% ---- Portada --------------------------------------------------------
+% ---- Portada ----------------------------------------------------------
 \begin{titlepage}
   \centering
   \includegraphics[width=3.4cm]{Logo-Color-Usach-Web.jpg}\\[0.3cm]
@@ -51,68 +56,191 @@
   {\normalsize Repositorio: \href{\repositorio}{Proyecto-Innova}}\\[0.2cm]
   {\normalsize Profesor: Francisco Parra O.}\\[0.6cm]
   \vfill
-  {\large 12 de noviembre de 2026}
+  {\large 17 de noviembre de 2026}
 \end{titlepage}
 
 \tableofcontents
 \newpage
 
-% =====================================================================
-% Borrador PEP 1. En Overleaf, usar este archivo como documento principal.
-% Mantener junto a Logo-Color-Usach-Web.jpg y unit_economics.tex.
-\section*{Resumen}
-\addcontentsline{toc}{section}{Resumen}
+% ======================================================================
+\section*{Resumen ejecutivo}
+\addcontentsline{toc}{section}{Resumen ejecutivo}
 
-ÍndicePartidas aborda el problema de los contratistas que preparan una
-cotización y, al terminar el trabajo, tienen dificultades para saber
-cuánto les costó ejecutarlo. Dos casos de vidriería muestran cómo se
-manifiesta el problema: un independiente reportó desviaciones de entre
-20 y 30\,\% en faenas complejas, y una pyme declaró desconocer su margen
-real \ev{E-01}\,\ev{E-02}.
+\producto\ aborda un problema estructural en el mercado de los contratistas
+independientes y pequeñas empresas de especialidades: la incapacidad de comparar
+sistemáticamente lo que cotizaron con lo que realmente les costó ejecutar el trabajo.
+Seis entrevistas de validación, con operadores de vidriería, un contratista general,
+un constructor civil, un contratista de climatización y un experto en finanzas e
+ingeniería, documentan desviaciones declaradas de entre el 2\,\% y el 30\,\% sobre
+el presupuesto, acompañadas de un desconocimiento generalizado del margen real de
+ganancia \ev{E-01}\,\ev{E-02}\,\ev{E-05}.
 
-La primera entrega propuesta conecta tres acciones: cotizar un trabajo,
-registrar su costo real y comparar ambos costos. Vidriería ofrece el
-punto de partida mejor documentado para probar ese recorrido. La
-decisión propuesta es perseverar con un flujo privado y acotado. El
-prototipo está en desarrollo y todavía queda por medir si los usuarios
-registran costos repetidamente y si contratan el servicio al precio
-propuesto \hip.
+La propuesta conecta tres acciones que hoy existen en forma desconectada: cotizar
+un trabajo, registrar su costo real durante la ejecución y comparar ambos costos al
+cierre. El rubro de vidriería es el punto de partida mejor documentado para probar
+ese recorrido. Una prueba de usabilidad con prototipo estático en Figma, aplicada
+a dos participantes que ya habían sido entrevistados (E-01 y E-02), sugiere que
+cotizar con partidas predefinidas tomaría entre 3 y 4 minutos y que registrar un
+costo habitual podría tomar entre 19 y 24 segundos. Estos datos son indicativos:
+el tamaño de muestra es pequeño y existe sesgo de cortesía; el experimento de campo
+con usuarios independientes sigue pendiente \hip.
 
+La decisión propuesta es perseverar con un flujo privado acotado y ejecutar a
+continuación el piloto comercial con precio informado, del cual todavía no se
+dispone de compromisos verificables de pago \hip.
+
+% ======================================================================
 \section{El problema}
 
 \subsection{Enunciado}
-El contratista independiente o responsable de una pyme de vidriería
-necesita cotizar trabajos a medida y saber si el precio cubrió los costos
-reales. E-01 tarda entre 30 minutos y 2 horas por cotización y detecta
-algunos sobrecostos durante la compra de insumos o frente a imprevistos de
-obra. E-02 cotiza en sesiones de 2 a 3 horas, usa un cuaderno y detecta
-errores de cubicación al pagar materiales. Las entrevistas documentan
-el problema durante la preparación y ejecución de trabajos, con tiempos
-y costos de casos concretos \ev{E-01}\,\ev{E-02}.
 
-\subsection{Reencuadre}
-El planteamiento inicial utilizaba la cotización para reunir información
-y construir un índice de costos. Las entrevistas hicieron visible un
-beneficio inmediato para quien registra los datos: conocer el resultado
-económico de su propio trabajo. El primer recorrido se centra por ello
-en la comparación privada. El índice sectorial queda como una
-oportunidad posterior, sujeta a participación voluntaria y calidad de
-los datos \ev{E-01}\,\ev{E-02}\,\ev{E-03}\,\hip.
+Los contratistas independientes y los responsables de pequeñas empresas de
+especialidades, vidriería, electricidad, climatización, terminaciones, necesitan
+preparar cotizaciones que cubran correctamente sus costos y les permitan obtener
+una utilidad real. Sin embargo, la mayoría trabaja con cuadernos, planillas o
+presupuestos anteriores y no compara sistemáticamente lo cotizado con lo realmente
+ejecutado.
+
+Este problema aparece cada vez que el contratista prepara y luego ejecuta un
+trabajo: el tiempo de cotización puede oscilar entre 30 minutos y varias horas,
+y las desviaciones informadas van del 2\,\% en proyectos de construcción formal
+\ev{E-05} hasta el 20--30\,\% en trabajos de vidriería con imprevistos de terreno
+\ev{E-01}. Como resultado, varios entrevistados descubren los errores solo cuando
+ya compraron los materiales o terminaron el trabajo, sin haber calculado en ningún
+momento su margen real \ev{E-02}.
+
+El experto en finanzas e ingeniería lo sintetizó con precisión:
+\begin{quote}
+``Muchas empresas quiebran por no hacer los presupuestos como corresponde.
+[El subcotizar] te cae en los cobros, a veces cobraste muy barato, y eso
+puede no tener vuelta atrás.'' \ev{E-04} [cita parcialmente parafraseada
+para uso formal; la transcripción está disponible en el archivo de entrevistas]
+\end{quote}
+
+\subsection{Quién tiene el problema}
+
+La tabla siguiente describe los perfiles entrevistados y su relación con el problema:
+
+\begin{tabularx}{\linewidth}{@{}lXl@{}}
+\toprule
+\textbf{Perfil} & \textbf{Situación actual} & \textbf{Evidencia} \\
+\midrule
+Contratista independiente de vidriería &
+  Cotiza a mano. Detecta sobrecostos al comprar materiales. No compara al cierre. &
+  \ev{E-01} \\
+\addlinespace
+Pyme de vidriería y aluminio &
+  Usa cuaderno. Desconoce su margen neto. Descartó software por precio. &
+  \ev{E-02} \\
+\addlinespace
+Contratista general de obras &
+  Se basa en históricos informales. Busca referencias de costos y directorio de especialistas. &
+  \ev{E-03} \\
+\addlinespace
+Experto en finanzas e ingeniería &
+  Mantiene carpetas y Excel históricos. Alerta sobre riesgo de quiebra por subcotización. &
+  \ev{E-04} \\
+\addlinespace
+Constructor civil, terminaciones y altura &
+  Usa Excel con APU y dólar referencial. Desvíos del 2--10\,\%. Propone al Administrador de Obra como usuario capturador. &
+  \ev{E-05} \\
+\addlinespace
+Contratista de climatización (Pyme) &
+  Presupuesta en Excel y actualiza precios semanalmente. Iniciando control cotizado vs. ejecutado. Desvíos de hasta 15\,\%. &
+  \ev{E-06} \\
+\bottomrule
+\end{tabularx}
+
+\subsection{Cuándo ocurre}
+
+El problema se manifiesta en dos momentos:
+\begin{enumerate}
+  \item \textbf{Al preparar la cotización.} El contratista invierte entre 30 minutos
+  y varias horas recalculando desde cero o revisando presupuestos anteriores, con
+  riesgo de cometer errores de cubicación o usar precios desactualizados
+  \ev{E-01}\,\ev{E-02}\,\ev{E-05}.
+  \item \textbf{Al ejecutar el trabajo.} Los imprevistos de terreno (rotura de
+  vidrios, pisos altos sin ascensor, traslados a comunas periféricas, tiempos muertos
+  en edificios) no estaban contemplados en la cotización y el contratista los absorbe
+  sin haberlos presupuestado \ev{E-01}\,\ev{E-06}.
+\end{enumerate}
+
+\subsection{Cuánto cuesta el problema}
+
+\begin{itemize}
+  \item \textbf{Desviaciones declaradas:} 20--30\,\% en vidriería con imprevistos
+  \ev{E-01}; hasta 15\,\% en climatización \ev{E-06}; 2--10\,\% en construcción
+  formal con APU \ev{E-05}.
+  \item \textbf{Tiempo invertido en cotizar:} 30 min.\ a 2 h por cotización en
+  vidriería independiente \ev{E-01}; 2--3 h por sesión en pyme de vidriería
+  \ev{E-02}. Con 10 cotizaciones mensuales y 1,25 h promedio, el tiempo equivale
+  a \$125.000 mensuales valorados a \$10.000 la hora \hip.
+  \item \textbf{Tasa de cierre:} entre 4 de 10 (independiente de vidriería) y
+  6 de 10 (pyme con clientes recurrentes) para trabajos directos \ev{E-01}\,\ev{E-02};
+  2 de 10 en licitaciones industriales \ev{E-04}.
+  \item \textbf{Desconocimiento del margen:} E-02 declara no saber cuál es su
+  margen neto real. E-01 estima ``para no ir a pérdida'' pero sin controlar el
+  resultado al cierre \ev{E-01}\,\ev{E-02}.
+\end{itemize}
+
+\subsection{Reencuadre del problema}
+
+El planteamiento inicial de \producto\ suponía que el dolor central era el tiempo
+de cotización y que el valor diferenciador sería la velocidad. Las entrevistas
+desplazaron ese foco: la ausencia de control posterior genera consecuencias económicas
+más graves que la lentitud para presupuestar. Por eso el primer recorrido del
+producto se centra en conectar cotización, ejecución y comparación privada. El
+índice sectorial agrupado queda como segunda etapa, sujeta a participación voluntaria
+y calidad de los datos \ev{E-01}\,\ev{E-02}\,\ev{E-03}\,\hip.
+
+\subsection{Alternativas actuales y por qué fallan}
+
+Los usuarios resuelven el problema hoy con herramientas que no cierran el ciclo:
+
+\begin{tabularx}{\linewidth}{@{}lXX@{}}
+\toprule
+\textbf{Alternativa} & \textbf{Para qué sirve} & \textbf{Por qué no es suficiente} \\
+\midrule
+Cuaderno (sin costo) & Anotar costos de materiales en terreno & Sin cálculo automático, sin comparación al cierre y sin historial reutilizable \ev{E-01}\,\ev{E-02} \\
+Excel (\$179.990 compra única o incluido en M365) & Crear plantillas de presupuesto personalizadas & El ciclo Cotizado $\rightarrow$ Ejecutado requiere mantener manualmente tablas adicionales; E-01 lo intentó y abandonó \ev{E-01} \\
+Presupuestos anteriores (sin costo) & Reutilizar precios conocidos & Precios desactualizados; sin registro de desviaciones previas \ev{E-01}\,\ev{E-05} \\
+APU Chile (desde \$54.990) & Bases de datos de precios para construcción (apuchile.cl) & Solo presupuesto; sin registro de ejecución ni comparación al cierre \\
+Presto (licencia empresa) & Presupuesto, APU y control de ejecución en construcción (prestochile.cl) & Orientado a obra civil; precio y complejidad superan las necesidades de pymes pequeñas \ev{E-02} \\
+Buildertrend / Procore (suscripción empresarial) & Gestión integral de proyectos de construcción & Precio y alcance exceden el presupuesto de contratistas pequeños \ev{E-02} \\
+\bottomrule
+\end{tabularx}
 
 \subsection{Por qué vale la pena resolverlo}
+
 \begin{itemize}
-  \item \textbf{Dolor.} Los sobrecostos aparecen durante el trabajo y el
-  margen real puede quedar sin calcular \ev{E-01}\,\ev{E-02}.
-  \item \textbf{Frecuencia.} La preparación de presupuestos forma parte
-  de los trabajos descritos. Falta medir el volumen mensual y la
-  frecuencia de sobrecostos por cuenta \ev{E-01}\,\ev{E-02}\,\hip.
-  \item \textbf{Costo actual.} Hay tiempo invertido en preparar
-  cotizaciones. E-02 evaluó software especializado y lo descartó por su
-  precio. El gasto efectivo en suscripciones del segmento inicial
-  sigue sin cuantificarse \ev{E-01}\,\ev{E-02}\,\hip.
-  \item \textbf{Búsqueda de alternativas.} E-01 probó una planilla y
-  volvió al cálculo manual. E-02 evaluó software y siguió utilizando
-  un cuaderno \ev{E-01}\,\ev{E-02}.
+  \item \textbf{Dolor confirmado.} Los sobrecostos aparecen durante o después del
+  trabajo, y el margen real puede quedar sin calcular \ev{E-01}\,\ev{E-02}.
+  \item \textbf{Frecuencia alta.} La preparación de presupuestos ocurre con cada
+  nuevo trabajo y en algunos casos varias veces a la semana \ev{E-01}\,\ev{E-02}.
+  \item \textbf{Búsqueda de alternativas frustrada.} E-01 probó Excel y volvió al
+  cálculo manual. E-02 evaluó software especializado y siguió con el cuaderno
+  porque era demasiado caro \ev{E-01}\,\ev{E-02}.
+  \item \textbf{Riesgo de quiebra documentado.} El experto financiero indica que
+  subcotizar de manera sistemática es una de las principales causas de insolvencia
+  en pymes de servicios \ev{E-04}.
+\end{itemize}
+
+\subsection{Por qué ahora}
+
+\begin{itemize}
+  \item La cobertura móvil 4G alcanza el 98\,\% en Chile según datos de 2025
+  (Internet Society, \emph{Country Report Chile 2025}), lo que permite registrar
+  información desde terreno sin depender de conexión fija.
+  \item El tráfico móvil aumentó 16,1\,\% interanual durante el primer semestre de
+  2026, con un promedio de 30,8 GB mensuales por conexión (SUBTEL,
+  \emph{Estadísticas 1er semestre 2026}). Esto indica que trasladar tareas de
+  oficina al teléfono es técnicamente viable para este segmento.
+  \item Los propios contratistas ya usan el teléfono para enviar fotografías y
+  reportes básicos \ev{E-05}; el obstáculo es el tiempo de ingreso, no la
+  disponibilidad del dispositivo \ev{E-01}.
+  \item El software de gestión de obras es técnicamente maduro (Presto, Buildertrend,
+  Procore), pero ninguna oferta accesible atiende específicamente el ciclo completo
+  para pymes pequeñas de especialidades a un precio mensual bajo.
 \end{itemize}
 
 \section{Validación con usuarios}
